@@ -2,7 +2,7 @@
 	import { initializeApp } from 'firebase/app';
 	import { onMount } from 'svelte';
 	import { getAuth, onAuthStateChanged } from 'firebase/auth';
-	import { isLogeedIn, userid } from '$lib/authStore';
+	import { authStore } from '$lib/authStore';
 	import firebaseConfig from '../lib/env';
 
 	onMount(() => {
@@ -13,7 +13,8 @@
 			if (user) {
 				// User is signed in, see docs for a list of available properties
 				// https://firebase.google.com/docs/reference/js/firebase.User
-				$userid = user.uid;
+				$authStore.userid = user.uid;
+				$authStore.isLoggedIn = true;
 				// ...
 			} else {
 				// User is signed out

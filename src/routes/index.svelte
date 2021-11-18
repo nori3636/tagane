@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { getAuth, signOut } from 'firebase/auth';
-	import { isLogeedIn, userid } from '$lib/authStore';
+	import { authStore } from '$lib/authStore';
+	import { goto } from '$app/navigation';
+	import { onDestroy } from 'svelte';
 	async function logoutWithGoogle() {
 		try {
 			const auth = getAuth();
@@ -9,10 +11,20 @@
 			console.log(e);
 		}
 	}
+	const sub = authStore.subscribe(async (u) => {
+		if (!u.isLoggedIn) {
+			await goto('/login');
+		}
+	});
+
+	onDestroy(() => {
+		sub();
+	});
 </script>
 
 <h1>Welcome to SvelteKit</h1>
-<h2>{$userid}</h2>
+<h2>{$authStore.userid}</h2>
+<h2>{$authStore.isLoggedIn}</h2>
 
 <button on:click={logoutWithGoogle}>ログアウト</button>
 
