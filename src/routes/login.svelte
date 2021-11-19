@@ -9,7 +9,6 @@
 			const auth = getAuth();
 			const provider = new GoogleAuthProvider();
 			await signInWithPopup(auth, provider);
-			$authStore.isLoggedIn = true;
 		} catch (e) {
 			console.log(e);
 		}
@@ -17,7 +16,7 @@
 
 	const sub = authStore.subscribe(async (u) => {
 		if (u.isLoggedIn) {
-			await goto('/');
+			await goto('/qr');
 		}
 	});
 
@@ -27,6 +26,7 @@
 </script>
 
 <h1>Login with Google</h1>
+<h2>{$authStore.isLoggedIn}</h2>
 
 <img on:click={loginWithGoogle} src="/login-with-google.png" alt="Login With Google" />
 
