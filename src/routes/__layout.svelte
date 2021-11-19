@@ -14,7 +14,7 @@
 				// User is signed in, see docs for a list of available properties
 				// https://firebase.google.com/docs/reference/js/firebase.User
 				$authStore.userid = user.uid;
-				$authStore.isLoggedIn = true;
+				$authStore.username = user.displayName;
 				// ...
 			} else {
 				// User is signed out

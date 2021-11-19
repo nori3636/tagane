@@ -9,6 +9,7 @@
 			const auth = getAuth();
 			const provider = new GoogleAuthProvider();
 			await signInWithPopup(auth, provider);
+			$authStore.isLoggedIn = true;
 		} catch (e) {
 			console.log(e);
 		}
