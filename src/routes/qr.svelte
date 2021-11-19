@@ -2,6 +2,7 @@
 	import Header from '../components/header.svelte';
 	import jsQR from 'jsqr';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	onMount(() => {
 		let video = document.createElement('video');
 		let canvas = <HTMLCanvasElement>document.getElementById('canvas');
@@ -27,6 +28,9 @@
 				if (code) {
 					drawRect(code.location); // Rect
 					msg.innerText = code.data; // Data
+					if (code.data.startsWith('http://localhost:3000/')) {
+						goto(code.data);
+					}
 				} else {
 					msg.innerText = 'Detecting QR-Code...';
 				}
