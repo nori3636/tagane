@@ -1,9 +1,10 @@
 <script>
 	import { initializeApp } from 'firebase/app';
-	import { onMount } from 'svelte';
-	import { getAuth, onAuthStateChanged } from 'firebase/auth';
+	import { onDestroy, onMount } from 'svelte';
+	import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 	import { authStore } from '$lib/authStore';
 	import firebaseConfig from '../lib/env';
+	import { goto } from '$app/navigation';
 
 	onMount(() => {
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
