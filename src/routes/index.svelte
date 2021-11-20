@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { authStore } from '$lib/authStore';
-	import { checkio, db } from '$lib/firebase';
+	import { db } from '$lib/firebase';
 	import { Button, Modal } from 'carbon-components-svelte';
 	import { ImageLoader } from 'carbon-components-svelte';
 
 	import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 	import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
-	import { onDestroy, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	async function exitdb() {
 		try {

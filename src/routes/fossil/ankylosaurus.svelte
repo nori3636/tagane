@@ -3,7 +3,7 @@
 	import { checkio, db } from '$lib/firebase';
 	import { Button } from 'carbon-components-svelte';
 	import { doc, updateDoc } from 'firebase/firestore';
-	import Header from 'src/components/header.svelte';
+	import Header from '$lib/components/header.svelte';
 	import { onMount } from 'svelte';
 
 	async function updatedb() {

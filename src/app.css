@@ -6,6 +6,10 @@
 	position: relative;
 	text-align: right;
 }
+.left {
+	position: relative;
+	text-align: left;
+}
 
 .margin-big {
 	margin: 40px;

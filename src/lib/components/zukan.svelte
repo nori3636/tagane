@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { db } from '../lib/firebase';
-	import Fossil from '../components/fossil.svelte';
+	import { db } from '../firebase';
+	import Fossil from './fossil.svelte';
 	import { doc, getDoc } from 'firebase/firestore';
 	import { authStore } from '$lib/authStore';
 

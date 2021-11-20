@@ -12,10 +12,14 @@
 			console.log(e);
 		}
 	}
+	function backqr() {
+		goto('/qr');
+	}
 </script>
 
 <slot>
 	<Row>
+		<Column><div class="left"><Button on:click={backqr}>←戻る</Button></div></Column>
 		<Column><h4 class="margin-small">{$authStore.username + ' さん'}</h4></Column>
 		<Column><div class="right"><Button on:click={logoutWithGoogle}>ログアウト</Button></div></Column
 		>
