@@ -5,7 +5,7 @@
 	import { doc, getDoc } from 'firebase/firestore';
 	import { authStore } from '$lib/authStore';
 
-	const testjson = { test: true, spino: false, ankylo: false };
+	let testjson;
 
 	let dataFetchingPromise;
 
@@ -14,25 +14,26 @@
 		const docSnap = await getDoc(Ref);
 		if (docSnap.exists()) {
 			console.log('Document data:', docSnap.data());
-			return testjson;
+			console.log(docSnap.data());
+			testjson = docSnap.data();
+			return docSnap.data();
 		} else {
 			// doc.data() will be undefined in this case
 			console.log('No such document!');
-			return testjson;
+			return undefined;
 		}
 	}
 
 	onMount(() => {
 		dataFetchingPromise = getdb();
-		console.log(dataFetchingPromise);
 	});
 </script>
 
 <slot>
-	{#await}
+	{#await dataFetchingPromise}
 		loading...
-	{:then}
-		{#each Object.entries(dataFetchingPromise) as [key, value]}
+	{:then testjson}
+		{#each Object.entries(testjson ?? {}) as [key, value]}
 			<Fossil name={key} show={value} />
 		{/each}
 	{:catch err}

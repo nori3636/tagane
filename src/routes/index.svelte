@@ -32,6 +32,11 @@
 	<h1 class="center margin-big">Welcome to Tagane</h1>
 	<ImageLoader src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
 	<div class="center margin-big">
-		<img on:click={loginWithGoogle} src="/login-with-google.png" alt="Login With Google" />
+		<img
+			on:click={loginWithGoogle}
+			src="/login-with-google.png"
+			alt="Login With Google"
+			width="80%"
+		/>
 	</div>
 </div>
