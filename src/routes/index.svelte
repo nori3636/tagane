@@ -2,6 +2,8 @@
 	import { goto } from '$app/navigation';
 	import { authStore } from '$lib/authStore';
 	import { Button } from 'carbon-components-svelte';
+	import { ImageLoader } from 'carbon-components-svelte';
+	import { Grid, Row, Column } from 'carbon-components-svelte';
 	function login() {
 		try {
 			authStore.subscribe(async (u) => {
@@ -17,7 +19,10 @@
 	}
 </script>
 
-<h1>Welcome to Main</h1>
-<Button on:click={login}>ログイン</Button>
-
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div>
+	<h1 class="center margin-big">Welcome to Tagane</h1>
+	<ImageLoader src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+	<div class="center margin-big">
+		<Button on:click={login}>ログインして始める！！</Button>
+	</div>
+</div>

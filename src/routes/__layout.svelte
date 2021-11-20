@@ -5,6 +5,7 @@
 	import { authStore } from '$lib/authStore';
 	import firebaseConfig from '../lib/env';
 	import { goto } from '$app/navigation';
+	import '../app.css';
 
 	onMount(() => {
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional

@@ -1,0 +1,12 @@
+.center {
+	position: relative;
+	text-align: center;
+}
+
+.margin-big {
+	margin: 40px;
+}
+
+.all {
+	background-color: brown;
+}
