@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { collection, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
-	import { db } from '../lib/firebase';
+	import { db } from '$lib/firebase';
 	import { Button } from 'carbon-components-svelte';
 	import { authStore } from '$lib/authStore';
 
