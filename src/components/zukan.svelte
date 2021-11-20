@@ -32,8 +32,8 @@
 <slot>
 	{#await dataFetchingPromise}
 		loading...
-	{:then testjson}
-		{#each Object.entries(testjson ?? {}) as [key, value]}
+	{:then dataFetchingPromise}
+		{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
 			<Fossil name={key} show={value} />
 		{/each}
 	{:catch err}

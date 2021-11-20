@@ -1,20 +1,14 @@
 <script>
 	import { authStore } from '$lib/authStore';
 	import { db } from '$lib/firebase';
-	import { Button } from 'carbon-components-svelte';
 	import { doc, updateDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 
 	async function updatedb() {
 		try {
-			const Ref = doc(db, 'fossil', $authStore.userid);
-
+			const washingtonRef = doc(db, 'fossil', $authStore.userid);
 			// Set the "capital" field of the city 'DC'
-
-			await updateDoc(Ref, {
-				ankylo: true
-			});
-			console.log('update');
+			await updateDoc(washingtonRef, { plesio: true });
 		} catch (e) {
 			console.log(e);
 		}
@@ -25,5 +19,4 @@
 </script>
 
 <!-- svelte-ignore missing-declaration -->
-<h1>アンキロサウルス発見！</h1>
-<Button kind="secondary" on:click={updatedb}>updatedb</Button>
+<h1>プレシオサウルス発見！</h1>

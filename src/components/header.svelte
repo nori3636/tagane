@@ -7,10 +7,9 @@
 		try {
 			const auth = getAuth();
 			await signOut(auth);
+			await goto('/');
 		} catch (e) {
 			console.log(e);
-		} finally {
-			goto('/');
 		}
 	}
 </script>
