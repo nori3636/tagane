@@ -14,7 +14,7 @@
 		const docSnap = await getDoc(Ref);
 		if (docSnap.exists()) {
 			console.log('Document data:', docSnap.data());
-			return docSnap.data();
+			return testjson;
 		} else {
 			// doc.data() will be undefined in this case
 			console.log('No such document!');
@@ -24,14 +24,15 @@
 
 	onMount(() => {
 		dataFetchingPromise = getdb();
+		console.log(dataFetchingPromise);
 	});
 </script>
 
 <slot>
-	{#await testjson}
+	{#await}
 		loading...
-	{:then testjson}
-		{#each Object.entries(testjson) as [key, value]}
+	{:then}
+		{#each Object.entries(dataFetchingPromise) as [key, value]}
 			<Fossil name={key} show={value} />
 		{/each}
 	{:catch err}
