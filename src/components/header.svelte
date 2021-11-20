@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { authStore } from '$lib/authStore';
 	import { getAuth, signOut } from 'firebase/auth';
-	import { Grid, Row, Column, Button } from 'carbon-components-svelte';
+	import { Row, Column, Button } from 'carbon-components-svelte';
 	async function logoutWithGoogle() {
 		try {
 			const auth = getAuth();
