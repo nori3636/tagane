@@ -30,6 +30,6 @@
 </script>
 
 <h1>図鑑ページです</h1>
-{#each Object.entries(testjson) as [key, value]}
+{#each Object.entries(json) as [key, value]}
 	<Fossil name={key} show={value} />
 {/each}
