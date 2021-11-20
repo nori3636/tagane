@@ -29,6 +29,3 @@
 <h2>{$authStore.isLoggedIn}</h2>
 
 <img on:click={loginWithGoogle} src="/login-with-google.png" alt="Login With Google" />
-
-<style>
-</style>

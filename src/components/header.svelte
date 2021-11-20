@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { authStore } from '$lib/authStore';
 	import { getAuth, signOut } from 'firebase/auth';
-
+	import { Grid, Row, Column, Button } from 'carbon-components-svelte';
 	async function logoutWithGoogle() {
 		try {
 			const auth = getAuth();
@@ -14,8 +14,8 @@
 </script>
 
 <slot>
-	<h2>{$authStore.username}</h2>
-	<h2>{$authStore.isLoggedIn}</h2>
-
-	<button on:click={logoutWithGoogle}>ログアウト</button>
+	<Row>
+		<Column><h2>{$authStore.username}</h2></Column>
+		<Column><Button on:click={logoutWithGoogle}>ログアウト</Button></Column>
+	</Row>
 </slot>

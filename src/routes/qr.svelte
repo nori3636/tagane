@@ -2,6 +2,7 @@
 	import Header from '../components/header.svelte';
 	import jsQR from 'jsqr';
 	import { onMount } from 'svelte';
+	import { TextArea } from 'carbon-components-svelte';
 	onMount(() => {
 		let video = document.createElement('video');
 		let canvas = <HTMLCanvasElement>document.getElementById('canvas');
@@ -19,8 +20,8 @@
 		function startTick() {
 			msg.innerText = 'Loading video...';
 			if (video.readyState === video.HAVE_ENOUGH_DATA) {
-				canvas.height = video.videoHeight;
-				canvas.width = video.videoWidth;
+				canvas.height = video.videoHeight / 2;
+				canvas.width = video.videoWidth / 2;
 				ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 				let img = ctx.getImageData(0, 0, canvas.width, canvas.height);
 				let code = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
@@ -53,8 +54,8 @@
 </script>
 
 <Header />
-<h1>QR</h1>
+<h1 class="center margin">化石レーダー</h1>
 <div id="wrapper">
 	<div id="msg">Unable to access video stream.</div>
-	<canvas id="canvas" />
+	<canvas id="canvas" width="10" />
 </div>
