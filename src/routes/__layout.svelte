@@ -1,15 +1,12 @@
 <script>
-	import { initializeApp } from 'firebase/app';
-	import { onDestroy, onMount } from 'svelte';
-	import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+	import { auth } from '../lib/firebase';
+	import { onMount } from 'svelte';
 	import { authStore } from '$lib/authStore';
-	import firebaseConfig from '../lib/env';
+	import { onAuthStateChanged } from 'firebase/auth';
 	import { goto } from '$app/navigation';
-
+	import '../app.css';
 	onMount(() => {
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-		const app = initializeApp(firebaseConfig);
-		const auth = getAuth();
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
 				// User is signed in, see docs for a list of available properties
@@ -26,6 +23,9 @@
 				});
 				// User is signed out
 				// ...
+			}
+			if (!$authStore.isLoggedIn) {
+				goto('/login');
 			}
 		});
 	});

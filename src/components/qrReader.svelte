@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Header from '../components/header.svelte';
+	import { goto } from '$app/navigation';
 	import jsQR from 'jsqr';
 	import { onMount } from 'svelte';
-	import { TextArea } from 'carbon-components-svelte';
-	onMount(() => {
-		let video = document.createElement('video');
-		let canvas = <HTMLCanvasElement>document.getElementById('canvas');
-		let ctx = canvas.getContext('2d');
-		let msg = document.getElementById('msg');
 
+	onMount(() => {
+		const video = document.createElement('video');
+		const canvas = <HTMLCanvasElement>document.getElementById('canvas');
+		const ctx = canvas.getContext('2d');
+		const msg = document.getElementById('msg');
 		const userMedia = { video: { facingMode: 'environment' } };
+
 		navigator.mediaDevices.getUserMedia(userMedia).then((stream) => {
 			video.srcObject = stream;
 			video.setAttribute('playsinline', '');
@@ -23,16 +23,19 @@
 				//canvas.height = video.videoHeight;
 				//canvas.width = video.videoWidth;
 				ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-				let img = ctx.getImageData(0, 0, canvas.width, canvas.height);
-				let code = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
+				const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+				const code = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
 				if (code) {
 					drawRect(code.location); // Rect
 					msg.innerText = code.data; // Data
+					if (code.data.startsWith('http://localhost:3000/')) {
+						goto(code.data);
+					}
 				} else {
 					msg.innerText = 'Detecting QR-Code...';
 				}
 			}
-			setTimeout(startTick, 250);
+			setTimeout(startTick, 100);
 		}
 
 		function drawRect(location) {
@@ -51,8 +54,12 @@
 			ctx.stroke();
 		}
 	});
-	import Qrreader from '../components/qrReader.svelte';
 </script>
 
-<Header />
-<Qrreader />
+<slot>
+	<h1 class="center margin-big">化石レーダー</h1>
+	<div id="wrapper">
+		<div id="msg" class="margin-small">Unable to access video stream.</div>
+		<canvas id="canvas" class="center margin-big" height="240" />
+	</div>
+</slot>
