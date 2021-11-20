@@ -4,6 +4,8 @@
 	import { authStore } from '$lib/authStore';
 	import { onAuthStateChanged } from 'firebase/auth';
 	import { goto } from '$app/navigation';
+	import '../app.css';
+	import 'carbon-components-svelte/css/white.css';
 
 	onMount(() => {
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional

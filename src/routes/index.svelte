@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { authStore } from '$lib/authStore';
+	import { Button } from 'carbon-components-svelte';
 
 	function login() {
 		try {
@@ -18,6 +19,6 @@
 </script>
 
 <h1>Welcome to Main</h1>
-<button on:click={login}>ログイン</button>
+<Button kind="secondary" on:click={login}>ログイン</Button>
 
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
