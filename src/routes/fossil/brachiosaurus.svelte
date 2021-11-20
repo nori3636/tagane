@@ -1,31 +1,24 @@
 <script>
 	import { authStore } from '$lib/authStore';
-	import { checkio, db } from '$lib/firebase';
-	import { Button } from 'carbon-components-svelte';
+	import { db } from '$lib/firebase';
 	import { doc, updateDoc } from 'firebase/firestore';
 	import Header from 'src/components/header.svelte';
 	import { onMount } from 'svelte';
 
 	async function updatedb() {
 		try {
-			const Ref = doc(db, 'fossil', $authStore.userid);
-
+			const washingtonRef = doc(db, 'fossil', $authStore.userid);
 			// Set the "capital" field of the city 'DC'
-
-			await updateDoc(Ref, {
-				ankylo: true
-			});
-			console.log('update');
+			await updateDoc(washingtonRef, { brachio: true });
 		} catch (e) {
 			console.log(e);
 		}
 	}
 	onMount(() => {
-		checkio();
 		updatedb();
 	});
 </script>
 
 <!-- svelte-ignore missing-declaration -->
 <Header />
-<h1>アンキロサウルス発見！</h1>
+<h1>ブラキオサウルス発見！</h1>
