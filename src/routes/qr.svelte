@@ -3,6 +3,7 @@
 	import jsQR from 'jsqr';
 	import { onMount } from 'svelte';
 	import { TextArea } from 'carbon-components-svelte';
+	import Zukan from '../components/zukan.svelte';
 	onMount(() => {
 		let video = document.createElement('video');
 		let canvas = <HTMLCanvasElement>document.getElementById('canvas');
@@ -56,3 +57,4 @@
 
 <Header />
 <Qrreader />
+<Zukan />
