@@ -35,7 +35,7 @@
 					msg.innerText = 'Detecting QR-Code...';
 				}
 			}
-			setTimeout(startTick, 250);
+			setTimeout(startTick, 100);
 		}
 
 		function drawRect(location) {
