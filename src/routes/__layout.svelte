@@ -25,7 +25,7 @@
 				// ...
 			}
 			if (!$authStore.isLoggedIn) {
-				goto('/login');
+				goto('/');
 			}
 		});
 	});

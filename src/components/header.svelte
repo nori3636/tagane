@@ -2,6 +2,7 @@
 	import { authStore } from '$lib/authStore';
 	import { getAuth, signOut } from 'firebase/auth';
 	import { Row, Column, Button } from 'carbon-components-svelte';
+	import { goto } from '$app/navigation';
 	async function logoutWithGoogle() {
 		try {
 			const auth = getAuth();
@@ -9,13 +10,15 @@
 		} catch (e) {
 			console.log(e);
 		} finally {
+			goto('/');
 		}
 	}
 </script>
 
 <slot>
 	<Row>
-		<Column><h2>{$authStore.username}</h2></Column>
-		<Column><Button on:click={logoutWithGoogle}>ログアウト</Button></Column>
+		<Column><h4 class="margin-small">{$authStore.username + ' さん'}</h4></Column>
+		<Column><div class="right"><Button on:click={logoutWithGoogle}>ログアウト</Button></div></Column
+		>
 	</Row>
 </slot>

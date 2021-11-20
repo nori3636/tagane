@@ -18,7 +18,7 @@
 		});
 
 		function startTick() {
-			msg.innerText = 'Loading video...';
+			//msg.innerText = 'Loading video...';
 			if (video.readyState === video.HAVE_ENOUGH_DATA) {
 				//canvas.height = video.videoHeight;
 				//canvas.width = video.videoWidth;
@@ -32,7 +32,7 @@
 						goto(code.data);
 					}
 				} else {
-					msg.innerText = 'Detecting QR-Code...';
+					//msg.innerText = 'Detecting QR-Code...';
 				}
 			}
 			setTimeout(startTick, 100);
@@ -57,9 +57,7 @@
 </script>
 
 <slot>
-	<h1 class="center margin-big">化石レーダー</h1>
-	<div id="wrapper">
-		<div id="msg" class="margin-small">Unable to access video stream.</div>
-		<canvas id="canvas" class="center margin-big" height="240" />
+	<div id="wrapper" class="center">
+		<canvas id="canvas" height="250" />
 	</div>
 </slot>
