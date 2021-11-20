@@ -7,7 +7,7 @@
 
 	import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 	import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
-	import { onDestroy } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	async function exitdb() {
 		try {
@@ -55,11 +55,16 @@
 	// onDestroy(() => {
 	// 	sub();
 	// });
+	onMount(() => {
+		if ($authStore.isLoggedIn) {
+			goto('/qr');
+		}
+	});
 </script>
 
 <div>
 	<h1 class="center margin-big">Welcome to Tagane</h1>
-	<ImageLoader src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+	<!-- <ImageLoader src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" /> -->
 	<div class="center margin-big">
 		<img
 			on:click={loginWithGoogle}

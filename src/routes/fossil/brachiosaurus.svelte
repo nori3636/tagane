@@ -2,6 +2,7 @@
 	import { authStore } from '$lib/authStore';
 	import { db } from '$lib/firebase';
 	import { doc, updateDoc } from 'firebase/firestore';
+	import Header from 'src/components/header.svelte';
 	import { onMount } from 'svelte';
 
 	async function updatedb() {
@@ -19,4 +20,5 @@
 </script>
 
 <!-- svelte-ignore missing-declaration -->
+<Header />
 <h1>ブラキオサウルス発見！</h1>

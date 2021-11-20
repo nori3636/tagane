@@ -18,6 +18,7 @@ export const checkio = onAuthStateChanged(auth, (user) => {
 			username: user.displayName,
 			userid: user.uid
 		});
+		console.log('login');
 		// ...
 	} else {
 		authStore.set({
@@ -25,5 +26,6 @@ export const checkio = onAuthStateChanged(auth, (user) => {
 		});
 		// User is signed out
 		// ...
+		console.log('logout');
 	}
 });

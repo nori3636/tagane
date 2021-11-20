@@ -1,8 +1,9 @@
 <script>
 	import { authStore } from '$lib/authStore';
-	import { db } from '$lib/firebase';
+	import { checkio, db } from '$lib/firebase';
 	import { Button } from 'carbon-components-svelte';
 	import { doc, updateDoc } from 'firebase/firestore';
+	import Header from 'src/components/header.svelte';
 	import { onMount } from 'svelte';
 
 	async function updatedb() {
@@ -20,10 +21,11 @@
 		}
 	}
 	onMount(() => {
+		checkio();
 		updatedb();
 	});
 </script>
 
 <!-- svelte-ignore missing-declaration -->
+<Header />
 <h1>アンキロサウルス発見！</h1>
-<Button kind="secondary" on:click={updatedb}>updatedb</Button>
