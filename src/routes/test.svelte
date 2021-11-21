@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { collection, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
+	import { user } from '$lib/stores/user';
 	import { db } from '$lib/firebase';
 	import { Button } from 'carbon-components-svelte';
-	import { authStore } from '$lib/authStore';
+	import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 
 	async function add() {
-		const Ref = collection(db, 'fossil');
-		await setDoc(doc(Ref, $authStore.userid), {
+		if ($user === undefined) return;
+		const Ref = doc(db, 'fossil', $user.id);
+		await setDoc(Ref, {
 			ankylo: false,
 			spino: false
 		});
@@ -14,8 +15,8 @@
 
 	async function getdb() {
 		try {
-			if ($authStore.userid === undefined) return;
-			const Ref = doc(db, 'fossil', $authStore.userid);
+			if ($user === undefined) return;
+			const Ref = doc(db, 'fossil', $user.id);
 			const docSnap = await getDoc(Ref);
 			if (docSnap.exists()) {
 				console.log('Document data:', docSnap.data());
@@ -30,8 +31,8 @@
 
 	async function updatedb() {
 		try {
-			if ($authStore.userid === undefined) return;
-			const washingtonRef = doc(db, 'fossil', $authStore.userid);
+			if ($user === undefined) return;
+			const washingtonRef = doc(db, 'fossil', $user.id);
 
 			await updateDoc(washingtonRef, {
 				ankylo: true

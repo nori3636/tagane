@@ -1,5 +1,5 @@
 <script>
-	import { authStore } from '$lib/authStore';
+	import { user } from '$lib/stores/user';
 	import { checkio, db } from '$lib/firebase';
 	import { doc, updateDoc } from 'firebase/firestore';
 	import Header from '$lib/components/header.svelte';
@@ -7,8 +7,8 @@
 
 	async function updatedb() {
 		try {
-			if ($authStore.userid === undefined) return;
-			const Ref = doc(db, 'fossil', $authStore.userid);
+			if ($user === undefined) return;
+			const Ref = doc(db, 'fossil', $user.id);
 
 			await updateDoc(Ref, {
 				ovi: true

@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { authStore } from '$lib/authStore';
+	import { user as userStore } from '$lib/stores/user';
 	import { auth, db } from '$lib/firebase';
 	import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
-	import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
+	import { doc, getDoc, setDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 
 	async function exitdb() {
 		try {
-			if ($authStore.userid === undefined) return false;
-			const Ref = doc(db, 'fossil', $authStore.userid);
+			if ($userStore === undefined) return;
+			const Ref = doc(db, 'fossil', $userStore.id);
 			const docSnap = await getDoc(Ref);
 			return docSnap.exists();
 		} catch (e) {
@@ -19,8 +19,9 @@
 	}
 
 	async function add() {
-		const Ref = collection(db, 'fossil');
-		await setDoc(doc(Ref, $authStore.userid), {
+		if ($userStore === undefined) return;
+		const Ref = doc(db, 'fossil', $userStore.id);
+		await setDoc(Ref, {
 			ammmo: false,
 			deino: false,
 			ovi: false,
@@ -51,17 +52,14 @@
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
 				// User is signed in
-				authStore.set({
-					isLoggedIn: true,
-					username: user.displayName ?? undefined,
-					userid: user.uid
+				userStore.set({
+					id: user.uid,
+					name: user.displayName ?? ''
 				});
 				console.log('login');
 				goto('/qr');
 			} else {
-				authStore.set({
-					isLoggedIn: false
-				});
+				userStore.set(undefined);
 				// User is signed out
 				console.log('logout');
 			}

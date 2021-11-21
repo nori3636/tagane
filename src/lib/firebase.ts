@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { firebaseConfig } from '$lib/env';
-import { authStore } from './authStore';
+import { user as userStore } from './stores/user';
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
@@ -12,16 +12,13 @@ export const db = getFirestore();
 export const checkio = onAuthStateChanged(auth, (user) => {
 	if (user) {
 		// User is signed in
-		authStore.set({
-			isLoggedIn: true,
-			username: user.displayName ?? undefined,
-			userid: user.uid
+		userStore.set({
+			id: user.uid,
+			name: user.displayName ?? ''
 		});
 		console.log('login');
 	} else {
-		authStore.set({
-			isLoggedIn: false
-		});
+		userStore.set(undefined);
 		// User is signed out
 		console.log('logout');
 	}
