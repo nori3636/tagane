@@ -16,6 +16,7 @@
 			return docSnap.exists();
 		} catch (e) {
 			console.log(e);
+			return false;
 		}
 	}
 
@@ -35,14 +36,15 @@
 			const auth = getAuth();
 			const provider = new GoogleAuthProvider();
 			await signInWithPopup(auth, provider);
+			await goto('/qr');
+		} catch (e) {
+			console.log(e);
+		} finally {
 			if (exitdb()) {
 				add();
 			} else {
 				console.log('exit db!');
 			}
-			await goto('/qr');
-		} catch (e) {
-			console.log(e);
 		}
 	}
 
