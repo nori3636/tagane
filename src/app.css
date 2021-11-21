@@ -40,4 +40,5 @@ body {
 	margin: 0;
 	background-color: var(--accent-color);
 	background: white;
+	color: rgb(0, 0, 0);
 }
