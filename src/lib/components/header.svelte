@@ -30,6 +30,7 @@
 <slot>
 	<Row>
 		{#if back}
+<<<<<<< Updated upstream
 			<Column class="left">
 				<Button kind="secondary" on:click={backqr}><p>←戻る</p></Button>
 			</Column>
@@ -39,6 +40,19 @@
 				<ImageLoader src="\tagane_black.png" />
 			</div>
 			<h4 class="margin-small"><p>{$authStore.username + ' さん'}</p></h4></Column
+=======
+			<Column
+				><div class="left"><Button kind="secondary" on:click={backqr}>←戻る</Button></div></Column
+			>
+		{:else}
+			<Column><div class="left margin-around" /></Column>
+		{/if}
+		<Column><div class="center"><ImageLoader src="\tagane_black.png" /></div></Column>
+		<Column
+			><div class="right">
+				<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
+			</div></Column
+>>>>>>> Stashed changes
 		>
 		<Column class="right">
 			<Button kind="secondary" on:click={logoutWithGoogle}><p>ログアウト</p></Button>
