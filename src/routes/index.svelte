@@ -37,7 +37,7 @@
 			const provider = new GoogleAuthProvider();
 			await signInWithPopup(auth, provider).then(() => {
 				goto('/qr').then(() => {
-					if (exitdb()) {
+					if (!exitdb()) {
 						add();
 					} else {
 						console.log('exit db!');
