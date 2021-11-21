@@ -5,5 +5,5 @@ export const firebaseConfig = {
 	storageBucket: import.meta.env.VITE_STORAGE_BUCKET.toString(),
 	messagingSenderId: import.meta.env.VITE_MESSAGE_SENDER_ID.toString(),
 	appId: import.meta.env.VITE_APP_ID.toString(),
-	measurementId: import.meta.env.VITE_MEASUREMENT_ID.toString(),
+	measurementId: import.meta.env.VITE_MEASUREMENT_ID.toString()
 };
