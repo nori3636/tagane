@@ -18,7 +18,7 @@
 		});
 
 		function startTick() {
-			//msg.innerText = 'Loading video...';
+			console.log('Loading video...');
 			if (video.readyState === video.HAVE_ENOUGH_DATA) {
 				//canvas.height = video.videoHeight;
 				//canvas.width = video.videoWidth;
@@ -27,12 +27,12 @@
 				const code = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
 				if (code) {
 					drawRect(code.location); // Rect
-					msg.innerText = code.data; // Data
+					// msg.innerText = code.data; // Data
 					if (code.data.startsWith('https://tagane.vercel.app/')) {
 						goto(code.data);
 					}
 				} else {
-					//msg.innerText = 'Detecting QR-Code...';
+					console.log('Detecting QR-Code...');
 				}
 			}
 			setTimeout(startTick, 100);
