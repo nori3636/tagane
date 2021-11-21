@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { authStore } from '$lib/authStore';
-	import { db } from '$lib/firebase';
+	import { auth, checkio, db } from '$lib/firebase';
 	import { Button, Modal } from 'carbon-components-svelte';
 	import { ImageLoader } from 'carbon-components-svelte';
 
-	import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+	import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 	import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 
@@ -22,12 +22,12 @@
 	async function add() {
 		const Ref = collection(db, 'fossil');
 		await setDoc(doc(Ref, $authStore.userid), {
-			ankylo: false,
-			stego: false,
-			spino: false,
-			brachio: false,
-			tyranno: false,
-			plesio: false
+			ammmo: false,
+			deino: false,
+			ovi: false,
+			ples: false,
+			poly: false,
+			tyranno: false
 		});
 	}
 	async function loginWithGoogle() {
@@ -56,9 +56,32 @@
 	// 	sub();
 	// });
 	onMount(() => {
-		if ($authStore.isLoggedIn) {
-			goto('/qr');
-		}
+		onAuthStateChanged(auth, (user) => {
+			if (user) {
+				// User is signed in, see docs for a list of available properties
+				// https://firebase.google.com/docs/reference/js/firebase.User
+				authStore.set({
+					isLoggedIn: true,
+					username: user.displayName,
+					userid: user.uid
+				});
+				console.log('login');
+				goto('/qr');
+				// ...
+			} else {
+				authStore.set({
+					isLoggedIn: false
+				});
+				// User is signed out
+				// ...
+				console.log('logout');
+			}
+		});
+
+		// if ($authStore.isLoggedIn) {
+		// 	console.log('まだログインしてる');
+
+		// }
 	});
 </script>
 

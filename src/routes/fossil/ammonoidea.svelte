@@ -26,7 +26,7 @@
 </script>
 
 <!-- svelte-ignore missing-declaration -->
-<Header />
+<Header back={true} />
 <h1>アンモナイト</h1>
 <img src="/ammo.jpg" alt="main" width="80%" />
 <p>

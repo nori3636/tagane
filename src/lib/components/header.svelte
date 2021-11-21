@@ -3,23 +3,35 @@
 	import { getAuth, signOut } from 'firebase/auth';
 	import { Row, Column, Button, ImageLoader } from 'carbon-components-svelte';
 	import { goto } from '$app/navigation';
+	import { auth, checkio } from '$lib/firebase';
+
+	export let back: boolean;
+	let dataFetchingPromise;
 	async function logoutWithGoogle() {
 		try {
 			const auth = getAuth();
-			await signOut(auth);
-			await goto('/');
+			await signOut(auth)
+				.then(() => {
+					console.log('goto前');
+					goto('/');
+				})
+				.catch((e) => {
+					console.log(e);
+				});
 		} catch (e) {
 			console.log(e);
 		}
 	}
-	function backqr() {
-		goto('/qr');
+	async function backqr() {
+		await goto('/qr');
 	}
 </script>
 
 <slot>
 	<Row>
-		<Column><div class="left"><Button on:click={backqr}>←戻る</Button></div></Column>
+		{#if back}
+			<Column><div class="left"><Button on:click={backqr}>←戻る</Button></div></Column>
+		{/if}
 		<Column><div class="center"><ImageLoader src="\tagane_black.png" /></div></Column>
 		<Column><div class="right"><Button on:click={logoutWithGoogle}>ログアウト</Button></div></Column
 		>

@@ -7,7 +7,7 @@
 
 <slot>
 	{#if show}
-		<img src={name + '.jpeg'} alt="name" />
+		<img src={name + '.jpg'} alt="name" />
 		<div>説明文</div>
 	{:else}
 		<Column sm={2} md={4} lg={8} class="auma" noGutter>
