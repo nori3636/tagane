@@ -2,8 +2,9 @@
 	"name": "my-app",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"start": "sirv public --no-clear",
 		"preview": "svelte-kit preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
