@@ -17,13 +17,21 @@
 .top {
 	vertical-align: middle;
 }
+.auma {
+	margin: auto;
+}
 
 .margin-big {
 	margin-top: 40px;
 }
-
+.margin-middle {
+	margin-bottom: 10px;
+}
 .margin-small {
 	margin-top: 10px;
+}
+.margin-around {
+	margin: 10px;
 }
 
 :root {

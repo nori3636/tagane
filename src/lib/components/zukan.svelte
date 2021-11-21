@@ -34,8 +34,8 @@
 	{#await dataFetchingPromise}
 		loading...
 	{:then dataFetchingPromise}
-		<div class="margin-big">
-			<Row class="center" noGutter>
+		<div class="margin-small">
+			<Row class="center auma">
 				{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
 					<Fossil name={key} show={value} />
 				{/each}
