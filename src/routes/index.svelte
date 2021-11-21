@@ -53,7 +53,7 @@
 				// User is signed in
 				authStore.set({
 					isLoggedIn: true,
-					username: user.displayName??undefined,
+					username: user.displayName ?? undefined,
 					userid: user.uid
 				});
 				console.log('login');
