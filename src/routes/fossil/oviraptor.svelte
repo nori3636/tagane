@@ -9,8 +9,6 @@
 		try {
 			const Ref = doc(db, 'fossil', $authStore.userid);
 
-			// Set the "capital" field of the city 'DC'
-
 			await updateDoc(Ref, {
 				ovi: true
 			});

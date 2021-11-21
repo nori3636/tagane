@@ -11,21 +11,18 @@ export const db = getFirestore();
 
 export const checkio = onAuthStateChanged(auth, (user) => {
 	if (user) {
-		// User is signed in, see docs for a list of available properties
-		// https://firebase.google.com/docs/reference/js/firebase.User
+		// User is signed in
 		authStore.set({
 			isLoggedIn: true,
 			username: user.displayName,
 			userid: user.uid
 		});
 		console.log('login');
-		// ...
 	} else {
 		authStore.set({
 			isLoggedIn: false
 		});
 		// User is signed out
-		// ...
 		console.log('logout');
 	}
 });

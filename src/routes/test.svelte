@@ -31,7 +31,6 @@
 		try {
 			const washingtonRef = doc(db, 'fossil', $authStore.userid);
 
-			// Set the "capital" field of the city 'DC'
 			await updateDoc(washingtonRef, {
 				ankylo: true
 			});
@@ -42,7 +41,6 @@
 </script>
 
 <h1>テスト</h1>
-<!-- <h2>{}</h2> -->
 <Button kind="secondary" on:click={getdb}>getdb</Button>
 <Button kind="secondary" on:click={add}>adddb</Button>
 <Button kind="secondary" on:click={updatedb}>updatedb</Button>

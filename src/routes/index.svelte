@@ -46,20 +46,10 @@
 		}
 	}
 
-	// const sub = authStore.subscribe(async (u) => {
-	// 	if (u.isLoggedIn) {
-	// 		await goto('/qr');
-	// 	}
-	// });
-
-	// onDestroy(() => {
-	// 	sub();
-	// });
 	onMount(() => {
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
-				// User is signed in, see docs for a list of available properties
-				// https://firebase.google.com/docs/reference/js/firebase.User
+				// User is signed in
 				authStore.set({
 					isLoggedIn: true,
 					username: user.displayName,
@@ -67,21 +57,14 @@
 				});
 				console.log('login');
 				goto('/qr');
-				// ...
 			} else {
 				authStore.set({
 					isLoggedIn: false
 				});
 				// User is signed out
-				// ...
 				console.log('logout');
 			}
 		});
-
-		// if ($authStore.isLoggedIn) {
-		// 	console.log('まだログインしてる');
-
-		// }
 	});
 </script>
 
