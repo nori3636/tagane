@@ -24,7 +24,6 @@
 	}
 </script>
 
-<slot>
 	<Row>
 		{#if back}
 			<Column
@@ -40,7 +39,3 @@
 			</div></Column
 		>
 	</Row>
-</slot>
-
-<style>
-</style>

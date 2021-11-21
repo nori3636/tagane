@@ -27,7 +27,6 @@
 	});
 </script>
 
-<slot>
 	{#await dataFetchingPromise}
 		loading...
 	{:then dataFetchingPromise}
@@ -41,4 +40,3 @@
 	{:catch}
 		error!
 	{/await}
-</slot>

@@ -57,8 +57,6 @@
 	});
 </script>
 
-<slot>
 	<div id="wrapper" class="center">
 		<canvas id="canvas" height="250" />
 	</div>
-</slot>

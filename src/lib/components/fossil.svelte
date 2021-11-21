@@ -5,7 +5,6 @@
 	export let show: boolean;
 </script>
 
-<slot>
 	{#if show}
 		<Column sm={2} md={4} lg={8} class="auma" noGutter>
 			<img src={name + '.jpg'} alt="name" width="80%" />
@@ -17,4 +16,3 @@
 			<div class="margin-small center margin-middle">未発見</div>
 		</Column>
 	{/if}
-</slot>
