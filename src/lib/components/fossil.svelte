@@ -5,7 +5,7 @@
 
 <slot>
 	{#if show}
-		<img src={name + '.jpeg'} alt="name" />
+		<img src={name + '.jpg'} alt="name" />
 		<div>説明文</div>
 	{:else}
 		<div>見つけてないよ</div>
