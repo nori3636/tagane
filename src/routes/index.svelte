@@ -22,12 +22,12 @@
 	async function add() {
 		const Ref = collection(db, 'fossil');
 		await setDoc(doc(Ref, $authStore.userid), {
-			ankylo: false,
-			stego: false,
-			spino: false,
-			brachio: false,
-			tyranno: false,
-			plesio: false
+			ammmo: false,
+			deino: false,
+			ovi: false,
+			ples: false,
+			poly: false,
+			tyranno: false
 		});
 	}
 	async function loginWithGoogle() {

@@ -1,0 +1,36 @@
+<script>
+	import { authStore } from '$lib/authStore';
+	import { checkio, db } from '$lib/firebase';
+	import { doc, updateDoc } from 'firebase/firestore';
+	import Header from '$lib/components/header.svelte';
+	import { onMount } from 'svelte';
+
+	async function updatedb() {
+		try {
+			const Ref = doc(db, 'fossil', $authStore.userid);
+
+			// Set the "capital" field of the city 'DC'
+
+			await updateDoc(Ref, {
+				deino: true
+			});
+			console.log('update');
+		} catch (e) {
+			console.log(e);
+		}
+	}
+	onMount(() => {
+		checkio();
+		updatedb();
+	});
+</script>
+
+<!-- svelte-ignore missing-declaration -->
+<Header back={true} />
+<h1>ディニノニクス</h1>
+<img src="/deino.jpg" alt="main" width="80%" />
+<p>
+	デイノニクス (Deinonychus) は、白亜紀前期（アプチアン中期からアルビアン先期、約1億1,500万 -
+	1億800万年前）の北アメリカに生息した竜盤目ドロマエオサウルス科の代表的な肉食恐竜。
+	本種の命名に伴う論争が恐竜ルネサンスとして世界的な変革を促した。 出典：wikipedia
+</p>
