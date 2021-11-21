@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { authStore } from '$lib/authStore';
-	import { auth,db } from '$lib/firebase';
-	import { getAuth,GoogleAuthProvider,onAuthStateChanged,signInWithPopup } from 'firebase/auth';
-	import { collection,doc,getDoc,setDoc } from 'firebase/firestore';
+	import { auth, db } from '$lib/firebase';
+	import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+	import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 
 	async function exitdb() {

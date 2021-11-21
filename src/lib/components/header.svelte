@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { Button,Column,ImageLoader,Row } from 'carbon-components-svelte';
-	import { getAuth,signOut } from 'firebase/auth';
+	import { Button, Column, ImageLoader, Row } from 'carbon-components-svelte';
+	import { getAuth, signOut } from 'firebase/auth';
 
 	export let back: boolean;
 	async function logoutWithGoogle() {

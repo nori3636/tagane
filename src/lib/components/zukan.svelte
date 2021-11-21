@@ -1,7 +1,7 @@
 <script>
 	import { authStore } from '$lib/authStore';
 	import { Row } from 'carbon-components-svelte';
-	import { doc,getDoc } from 'firebase/firestore';
+	import { doc, getDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 	import { db } from '../firebase';
 	import Fossil from './fossil.svelte';

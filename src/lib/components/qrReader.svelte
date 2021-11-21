@@ -45,7 +45,7 @@
 			drawLine(location.bottomLeftCorner, location.topLeftCorner);
 		}
 
-		type Point = { x: number; y: number; };
+		type Point = { x: number; y: number };
 		function drawLine(begin: Point, end: Point) {
 			ctx.lineWidth = 4;
 			ctx.strokeStyle = '#FF3B58';
