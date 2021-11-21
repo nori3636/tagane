@@ -17,12 +17,18 @@
 .top {
 	vertical-align: middle;
 }
+.t {
+	position: relative;
+}
 .auma {
 	margin: auto;
 }
 
 .margin-big {
 	margin-top: 40px;
+}
+.margin-left {
+	margin-left: 20px;
 }
 .margin-middle {
 	margin-bottom: 10px;
@@ -32,6 +38,14 @@
 }
 .margin-around {
 	margin: 10px;
+}
+.margin-side-big {
+	margin-left: 35px;
+	margin-right: 35px;
+}
+.border {
+	border: 5px solid;
+	border-color: #000000;
 }
 
 :root {
