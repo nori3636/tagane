@@ -27,16 +27,16 @@
 	});
 </script>
 
-	{#await dataFetchingPromise}
-		loading...
-	{:then dataFetchingPromise}
-		<div class="margin-small">
-			<Row class="center auma">
-				{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
-					<Fossil name={key} show={value} />
-				{/each}
-			</Row>
-		</div>
-	{:catch}
-		error!
-	{/await}
+{#await dataFetchingPromise}
+	loading...
+{:then dataFetchingPromise}
+	<div class="margin-small">
+		<Row class="center auma">
+			{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
+				<Fossil name={key} show={value} />
+			{/each}
+		</Row>
+	</div>
+{:catch}
+	error!
+{/await}

@@ -24,18 +24,18 @@
 	}
 </script>
 
-	<Row>
-		{#if back}
-			<Column
-				><div class="left"><Button kind="secondary" on:click={backqr}>←戻る</Button></div></Column
-			>
-		{:else}
-			<Column><div class="left margin-around" /></Column>
-		{/if}
-		<Column><div class="center"><ImageLoader src="\tagane_black.png" /></div></Column>
-		<Column
-			><div class="right">
-				<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
-			</div></Column
-		>
-	</Row>
+<Row>
+	{#if back}
+		<Column>
+			<div class="left"><Button kind="secondary" on:click={backqr}>←戻る</Button></div>
+		</Column>
+	{:else}
+		<Column><div class="left margin-around" /></Column>
+	{/if}
+	<Column><div class="center"><ImageLoader src="\tagane_black.png" /></div></Column>
+	<Column>
+		<div class="right">
+			<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
+		</div>
+	</Column>
+</Row>
