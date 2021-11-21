@@ -28,7 +28,7 @@
 				if (code) {
 					drawRect(code.location); // Rect
 					msg.innerText = code.data; // Data
-					if (code.data.startsWith('http://localhost:3000/')) {
+					if (code.data.startsWith('https://tagane.vercel.app/')) {
 						goto(code.data);
 					}
 				} else {

@@ -87,7 +87,7 @@
 
 <div class="top center high">
 	<div width="50%" class="center top">
-		<img src="\tagane_black.png" width="50%" />
+		<img src="\tagane_black.png" alt="logo" width="50%" />
 		<img
 			on:click={loginWithGoogle}
 			src="/login-with-google.png"

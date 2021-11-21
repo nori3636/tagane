@@ -45651,7 +45651,7 @@ var init_dist3 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/firebase-2f3bb5ce.js
+// .svelte-kit/output/server/chunks/firebase-81019538.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -45694,13 +45694,13 @@ function writable(value, start = noop) {
   return { set, update, subscribe: subscribe2 };
 }
 var firebaseConfig, subscriber_queue, authStore, auth;
-var init_firebase_2f3bb5ce = __esm({
-  ".svelte-kit/output/server/chunks/firebase-2f3bb5ce.js"() {
+var init_firebase_81019538 = __esm({
+  ".svelte-kit/output/server/chunks/firebase-81019538.js"() {
     init_shims();
     init_dist();
     init_dist2();
     init_dist3();
-    init_app_1d5fe74a();
+    init_app_684b5cfd();
     firebaseConfig = {
       apiKey: "AIzaSyB1rH9ic_JCJ_UNM8yzkUbCZ_wj2O9WnMo",
       authDomain: "tagane.firebaseapp.com",
@@ -45736,17 +45736,17 @@ var init_firebase_2f3bb5ce = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-7a461c6f.js
-var layout_7a461c6f_exports = {};
-__export(layout_7a461c6f_exports, {
+// .svelte-kit/output/server/chunks/__layout-67a65ac1.js
+var layout_67a65ac1_exports = {};
+__export(layout_67a65ac1_exports, {
   default: () => _layout
 });
 var _layout;
-var init_layout_7a461c6f = __esm({
-  ".svelte-kit/output/server/chunks/__layout-7a461c6f.js"() {
+var init_layout_67a65ac1 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-67a65ac1.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist2();
     init_dist();
     init_dist3();
@@ -45756,9 +45756,9 @@ var init_layout_7a461c6f = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/error-40563a89.js
-var error_40563a89_exports = {};
-__export(error_40563a89_exports, {
+// .svelte-kit/output/server/chunks/error-5b8b9a6f.js
+var error_5b8b9a6f_exports = {};
+__export(error_5b8b9a6f_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -45766,10 +45766,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error2;
-var init_error_40563a89 = __esm({
-  ".svelte-kit/output/server/chunks/error-40563a89.js"() {
+var init_error_5b8b9a6f = __esm({
+  ".svelte-kit/output/server/chunks/error-5b8b9a6f.js"() {
     init_shims();
-    init_app_1d5fe74a();
+    init_app_684b5cfd();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -45789,7 +45789,7 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/HeaderSearch.svelte_svelte&type=style&lang-2861dc94.js
+// .svelte-kit/output/server/chunks/HeaderSearch.svelte_svelte&type=style&lang-e6cba394.js
 function debounce(fn, wait) {
   let t;
   return function() {
@@ -47474,10 +47474,10 @@ function _flatpickr(nodeList, config) {
   return instances.length === 1 ? instances[0] : instances;
 }
 var HOOKS, defaults, english, pad, int, arrayify, doNothing, monthToStr, revFormat, tokenRegex, formats, createDateFormatter, createDateParser, isBetween, duration, DEBOUNCED_CHANGE_MS, flatpickr, data, globalStore;
-var init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94 = __esm({
-  ".svelte-kit/output/server/chunks/HeaderSearch.svelte_svelte&type=style&lang-2861dc94.js"() {
+var init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394 = __esm({
+  ".svelte-kit/output/server/chunks/HeaderSearch.svelte_svelte&type=style&lang-e6cba394.js"() {
     init_shims();
-    init_firebase_2f3bb5ce();
+    init_firebase_81019538();
     HOOKS = [
       "onChange",
       "onClose",
@@ -47929,18 +47929,18 @@ var init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-1b825995.js
-var index_1b825995_exports = {};
-__export(index_1b825995_exports, {
+// .svelte-kit/output/server/chunks/index-afecc7b6.js
+var index_afecc7b6_exports = {};
+__export(index_afecc7b6_exports, {
   default: () => Routes
 });
 var Routes;
-var init_index_1b825995 = __esm({
-  ".svelte-kit/output/server/chunks/index-1b825995.js"() {
+var init_index_afecc7b6 = __esm({
+  ".svelte-kit/output/server/chunks/index-afecc7b6.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_app_684b5cfd();
+    init_firebase_81019538();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     init_dist2();
     init_dist3();
     init_dist();
@@ -47948,18 +47948,18 @@ var init_index_1b825995 = __esm({
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
       $$unsubscribe_authStore();
-      return `<div class="${"top center high"}"><div width="${"50%"}" class="${"center top"}"><img src="${"\\tagane_black.png"}" width="${"50%"}">
+      return `<div class="${"top center high"}"><div width="${"50%"}" class="${"center top"}"><img src="${"\\tagane_black.png"}" alt="${"logo"}" width="${"50%"}">
 		<img src="${"/login-with-google.png"}" alt="${"Login With Google"}" width="${"50%"}"></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/Button-68fa6d31.js
+// .svelte-kit/output/server/chunks/Button-37dd6f2f.js
 var ButtonSkeleton, Button;
-var init_Button_68fa6d31 = __esm({
-  ".svelte-kit/output/server/chunks/Button-68fa6d31.js"() {
+var init_Button_37dd6f2f = __esm({
+  ".svelte-kit/output/server/chunks/Button-37dd6f2f.js"() {
     init_shims();
-    init_app_1d5fe74a();
+    init_app_684b5cfd();
     ButtonSkeleton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$restProps = compute_rest_props($$props, ["href", "size", "small"]);
       let { href = void 0 } = $$props;
@@ -48101,16 +48101,16 @@ ${skeleton ? `${validate_component(ButtonSkeleton, "ButtonSkeleton").$$render($$
   }
 });
 
-// .svelte-kit/output/server/chunks/header-cb5eea54.js
-var AspectRatio, Row, Column, ImageLoader, css, Header;
-var init_header_cb5eea54 = __esm({
-  ".svelte-kit/output/server/chunks/header-cb5eea54.js"() {
+// .svelte-kit/output/server/chunks/header-5e1d5600.js
+var AspectRatio, Row, Column, ImageLoader, Header;
+var init_header_5e1d5600 = __esm({
+  ".svelte-kit/output/server/chunks/header-5e1d5600.js"() {
     init_shims();
-    init_app_1d5fe74a();
+    init_app_684b5cfd();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
-    init_firebase_2f3bb5ce();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
+    init_firebase_81019538();
     AspectRatio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$restProps = compute_rest_props($$props, ["ratio"]);
       let { ratio = "2x1" } = $$props;
@@ -48313,15 +48313,10 @@ var init_header_cb5eea54 = __esm({
     ${error2 ? `${slots.error ? slots.error({}) : ``}` : ``}`
       })}`}`;
     });
-    css = {
-      code: "p.svelte-obcdbm{font-size:50%;text-align:center}",
-      map: null
-    };
     Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { back } = $$props;
       if ($$props.back === void 0 && $$bindings.back && back !== void 0)
         $$bindings.back(back);
-      $$result.css.add(css);
       return `${slots.default ? slots.default({}) : `
 	${validate_component(Row, "Row").$$render($$result, {}, {}, {
         default: () => `${back ? `${validate_component(Column, "Column").$$render($$result, {}, {}, {
@@ -48334,11 +48329,6 @@ var init_header_cb5eea54 = __esm({
         })}
 		${validate_component(Column, "Column").$$render($$result, {}, {}, {
           default: () => `<div class="${"right"}">${validate_component(Button, "Button").$$render($$result, { kind: "secondary" }, {}, { default: () => `\u30ED\u30B0\u30A2\u30A6\u30C8` })}</div>`
-        })}
-		${validate_component(Column, "Column").$$render($$result, { class: "right" }, {}, {
-          default: () => `${validate_component(Button, "Button").$$render($$result, { kind: "secondary" }, {}, {
-            default: () => `<p class="${"svelte-obcdbm"}">\u30ED\u30B0\u30A2\u30A6\u30C8</p>`
-          })}`
         })}`
       })}
 `}`;
@@ -48346,159 +48336,162 @@ var init_header_cb5eea54 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/polypodiopsida-db1775cf.js
-var polypodiopsida_db1775cf_exports = {};
-__export(polypodiopsida_db1775cf_exports, {
+// .svelte-kit/output/server/chunks/polypodiopsida-19e53b32.js
+var polypodiopsida_19e53b32_exports = {};
+__export(polypodiopsida_19e53b32_exports, {
   default: () => Polypodiopsida
 });
 var Polypodiopsida;
-var init_polypodiopsida_db1775cf = __esm({
-  ".svelte-kit/output/server/chunks/polypodiopsida-db1775cf.js"() {
+var init_polypodiopsida_19e53b32 = __esm({
+  ".svelte-kit/output/server/chunks/polypodiopsida-19e53b32.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist3();
-    init_header_cb5eea54();
+    init_header_5e1d5600();
     init_dist();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     Polypodiopsida = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
       $$unsubscribe_authStore();
       return `
 ${validate_component(Header, "Header").$$render($$result, { back: true }, {}, {})}
-<h1>\u30B7\u30C0\u7A2E\u5B50\u985E</h1>
-<img src="${"/poly.jpg"}" alt="${"main"}" width="${"80%"}">
-<p>\u30B7\u30C0\u7A2E\u5B50\u985E\uFF08\u30B7\u30C0\u3057\u3085\u3057\u308B\u3044\uFF09\u3068\u306F\u5316\u77F3\u690D\u7269\u3067\u3001\u539F\u59CB\u7684\u306A\u88F8\u5B50\u690D\u7269\u306E\u4E00\u7FA4\u3067\u3042\u308B\u3002
-	\u7D042\u51045\u5343\u4E07\u5E74\u524D\u306E\u30C7\u30DC\u30F3\u7D00\u5F8C\u671F\u304B\u3089\u6804\u3048\u3001\u767D\u4E9C\u7D00\u306B\u7D76\u6EC5\u3057\u305F\u3002
-	\u5178\u578B\u7684\u306A\u3082\u306E\u3067\u306F\u73FE\u751F\u306E\u30B7\u30C0\u306B\u4F3C\u305F\u8449\uFF08\u6804\u990A\u8449\u3068\u80DE\u5B50\u8449\u304C\u5206\u5316\u3057\u3066\u3044\u306A\u3044\uFF09\u306B\u7A2E\u5B50\u304C\u3064\u3044\u3066\u3044\u308B\u304C\u3001\u305D\u306E\u4ED6\u306B\u5F62\u614B\u7684\u306B\u306F\u7570\u306A\u308B\u304C\u95A2\u9023\u3059\u308B\u3068\u8003\u3048\u3089\u308C\u308B\u591A\u6570\u306E\u7A2E\u985E\u3092\u542B\u3080\u3002
-	\u51FA\u5178\uFF1Awikipedia
-</p>`;
+
+<div><h1 class="${"margin-left"}">\u30B7\u30C0\u7A2E\u5B50\u985E</h1>
+	<div class="${"center"}"><img src="${"/poly.jpg"}" alt="${"main"}" width="${"72%"}"></div>
+	<div class="${"border margin-side-big"}"><p><strong>\u30B7\u30C0\u7A2E\u5B50\u985E\uFF08\u30B7\u30C0\u3057\u3085\u3057\u308B\u3044\uFF09\u3068\u306F\u5316\u77F3\u690D\u7269\u3067\u3001\u539F\u59CB\u7684\u306A\u88F8\u5B50\u690D\u7269\u306E\u4E00\u7FA4\u3067\u3042\u308B\u3002
+				\u7D042\u51045\u5343\u4E07\u5E74\u524D\u306E\u30C7\u30DC\u30F3\u7D00\u5F8C\u671F\u304B\u3089\u6804\u3048\u3001\u767D\u4E9C\u7D00\u306B\u7D76\u6EC5\u3057\u305F\u3002
+				\u5178\u578B\u7684\u306A\u3082\u306E\u3067\u306F\u73FE\u751F\u306E\u30B7\u30C0\u306B\u4F3C\u305F\u8449\uFF08\u6804\u990A\u8449\u3068\u80DE\u5B50\u8449\u304C\u5206\u5316\u3057\u3066\u3044\u306A\u3044\uFF09\u306B\u7A2E\u5B50\u304C\u3064\u3044\u3066\u3044\u308B\u304C\u3001\u305D\u306E\u4ED6\u306B\u5F62\u614B\u7684\u306B\u306F\u7570\u306A\u308B\u304C\u95A2\u9023\u3059\u308B\u3068\u8003\u3048\u3089\u308C\u308B\u591A\u6570\u306E\u7A2E\u985E\u3092\u542B\u3080\u3002
+				\u51FA\u5178\uFF1Awikipedia
+			</strong></p></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/tyrannosaurus-bb65fb42.js
-var tyrannosaurus_bb65fb42_exports = {};
-__export(tyrannosaurus_bb65fb42_exports, {
+// .svelte-kit/output/server/chunks/tyrannosaurus-9d80b35b.js
+var tyrannosaurus_9d80b35b_exports = {};
+__export(tyrannosaurus_9d80b35b_exports, {
   default: () => Tyrannosaurus
 });
 var Tyrannosaurus;
-var init_tyrannosaurus_bb65fb42 = __esm({
-  ".svelte-kit/output/server/chunks/tyrannosaurus-bb65fb42.js"() {
+var init_tyrannosaurus_9d80b35b = __esm({
+  ".svelte-kit/output/server/chunks/tyrannosaurus-9d80b35b.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist3();
-    init_header_cb5eea54();
+    init_header_5e1d5600();
     init_dist();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     Tyrannosaurus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
       $$unsubscribe_authStore();
       return `
 ${validate_component(Header, "Header").$$render($$result, { back: true }, {}, {})}
-<h1>\u30C6\u30A3\u30E9\u30CE\u30B5\u30A6\u30EB\u30B9</h1>
-<img src="${"/tyranno.jpg"}" alt="${"main"}" width="${"80%"}">
-<p>\u30C6\u30A3\u30E9\u30CE\u30B5\u30A6\u30EB\u30B9\uFF08\u5B66\u540D\uFF1Agenus Tyrannosaurus\uFF09\u306F\u3001\u7D046,800\u4E07 -
-	\u7D046,600\u4E07\u5E74\u524D\uFF08\u4E2D\u751F\u4EE3\u767D\u4E9C\u7D00\u672B\u671F\u30DE\u30FC\u30B9\u30C8\u30EA\u30D2\u30C1\u30A2\u30F3\uFF09\u306E\u5317\u30A2\u30E1\u30EA\u30AB\u5927\u9678\u306B\u751F\u606F\u3057\u3066\u3044\u305F\u8089\u98DF\u6050\u7ADC\u3002
-	\u5927\u578B\u7363\u811A\u985E\u306E1\u5C5E\u3067\u3042\u308B\u3002
-	\u6700\u5927\u5168\u9577\u306F\u7D0413\u30E1\u30FC\u30C8\u30EB\u3001\u6700\u5927\u4F53\u91CD\u306F\u7D049\u30C8\u30F3\u3068\u3001\u73FE\u5728\u307E\u3067\u5831\u544A\u3055\u308C\u3066\u3044\u308B\u7363\u811A\u985E\u306E\u4E2D\u3067\u53F2\u4E0A\u6700\u5927\u7D1A\u306E\u4F53\u683C\u3092\u8A87\u308B\u7A2E\u306E\u4E00\u3064\u306B\u6570\u3048\u3089\u308C\u3066\u304A\u308A\u3001\u4E2D\u751F\u4EE3\u6700\u5F8C\u306E\u5730\u8CEA\u533A\u5206\u3068\u3055\u308C\u308B\u30DE\u30FC\u30B9\u30C8\u30EA\u30D2\u30C1\u30A2\u30F3\u6700\u672B\u671F\u306E\u7D04200\u4E07\u5E74\u9593\u306B\u304B\u3051\u3066\u5317\u7C73\u30E9\u30E9\u30DF\u30C7\u30A3\u30A2\u5927\u9678\u306B\u751F\u606F\u3057\u3066\u3044\u305F\u3002
-	\u51FA\u5178\uFF1Awikipedia
-</p>`;
+
+<div><h1 class="${"margin-left"}">\u30C6\u30A3\u30E9\u30CE\u30B5\u30A6\u30EB\u30B9</h1>
+	<div class="${"center"}"><img src="${"/tyranno.jpg"}" alt="${"main"}" width="${"72%"}"></div>
+	<div class="${"border margin-side-big"}"><p><strong>\u30C6\u30A3\u30E9\u30CE\u30B5\u30A6\u30EB\u30B9\uFF08\u5B66\u540D\uFF1Agenus Tyrannosaurus\uFF09\u306F\u3001\u7D046,800\u4E07 -
+				\u7D046,600\u4E07\u5E74\u524D\uFF08\u4E2D\u751F\u4EE3\u767D\u4E9C\u7D00\u672B\u671F\u30DE\u30FC\u30B9\u30C8\u30EA\u30D2\u30C1\u30A2\u30F3\uFF09\u306E\u5317\u30A2\u30E1\u30EA\u30AB\u5927\u9678\u306B\u751F\u606F\u3057\u3066\u3044\u305F\u8089\u98DF\u6050\u7ADC\u3002
+				\u5927\u578B\u7363\u811A\u985E\u306E1\u5C5E\u3067\u3042\u308B\u3002
+				\u6700\u5927\u5168\u9577\u306F\u7D0413\u30E1\u30FC\u30C8\u30EB\u3001\u6700\u5927\u4F53\u91CD\u306F\u7D049\u30C8\u30F3\u3068\u3001\u73FE\u5728\u307E\u3067\u5831\u544A\u3055\u308C\u3066\u3044\u308B\u7363\u811A\u985E\u306E\u4E2D\u3067\u53F2\u4E0A\u6700\u5927\u7D1A\u306E\u4F53\u683C\u3092\u8A87\u308B\u7A2E\u306E\u4E00\u3064\u306B\u6570\u3048\u3089\u308C\u3066\u304A\u308A\u3001\u4E2D\u751F\u4EE3\u6700\u5F8C\u306E\u5730\u8CEA\u533A\u5206\u3068\u3055\u308C\u308B\u30DE\u30FC\u30B9\u30C8\u30EA\u30D2\u30C1\u30A2\u30F3\u6700\u672B\u671F\u306E\u7D04200\u4E07\u5E74\u9593\u306B\u304B\u3051\u3066\u5317\u7C73\u30E9\u30E9\u30DF\u30C7\u30A3\u30A2\u5927\u9678\u306B\u751F\u606F\u3057\u3066\u3044\u305F\u3002
+				\u51FA\u5178\uFF1Awikipedia
+			</strong></p></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/plesiosaurus-78d65ff5.js
-var plesiosaurus_78d65ff5_exports = {};
-__export(plesiosaurus_78d65ff5_exports, {
+// .svelte-kit/output/server/chunks/plesiosaurus-36dd980b.js
+var plesiosaurus_36dd980b_exports = {};
+__export(plesiosaurus_36dd980b_exports, {
   default: () => Plesiosaurus
 });
 var Plesiosaurus;
-var init_plesiosaurus_78d65ff5 = __esm({
-  ".svelte-kit/output/server/chunks/plesiosaurus-78d65ff5.js"() {
+var init_plesiosaurus_36dd980b = __esm({
+  ".svelte-kit/output/server/chunks/plesiosaurus-36dd980b.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist3();
-    init_header_cb5eea54();
+    init_header_5e1d5600();
     init_dist();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     Plesiosaurus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
       $$unsubscribe_authStore();
       return `
 ${validate_component(Header, "Header").$$render($$result, { back: true }, {}, {})}
-<h1>\u30D7\u30EC\u30B7\u30AA\u30B5\u30A6\u30EB\u30B9</h1>
-<img src="${"/ples.jpg"}" alt="${"main"}" width="${"80%"}">
-<p>\u30D7\u30EC\u30B7\u30AA\u30B5\u30A6\u30EB\u30B9\uFF08Plesiosaurus\uFF09\u306F\u4E2D\u751F\u4EE3\u30B8\u30E5\u30E9\u7D00\u524D\u671F\u306B\u68F2\u606F\u3057\u3066\u3044\u305F\u9996\u9577\u7ADC\u306E\u5C5E\u306E\u4E00\u3064\u3067\u3042\u308B\u3002\u9996\u9577\u7ADC\u76EE
-	- \u30D7\u30EC\u30B7\u30AA\u30B5\u30A6\u30EB\u30B9\u79D1\u306B\u5C5E\u3059\u308B\u3002
-	\u767A\u898B\u5F53\u521D\u306F\u6C34\u68F2\u306E\u751F\u304D\u7269\u3067\u3042\u308B\u3053\u3068\u304B\u3089\u300C\u9B5A\u985E\u3068\u722C\u866B\u985E\u306E\u4E2D\u9593\u7684\u751F\u7269\u3001\u305D\u306E\u4E2D\u3067\u3082\u722C\u866B\u985E\u306B\u3088\u308A\u8FD1\u3044\u300D\u3068\u63A8\u6E2C\u3055\u308C\u3001\u305D\u3053\u304B\u3089plesiosaurus=\u300C\u722C\u866B\u985E\u306B\u8FD1\u4F3C\u3057\u305F\u300D\u3092\u610F\u5473\u3059\u308B\u5C5E\u540D\u304C\u3064\u3051\u3089\u308C\u305F\u3002
-	\u51FA\u5178\uFF1Awikipedia
-</p>`;
+
+<div><h1 class="${"margin-left"}">\u30D7\u30EC\u30B7\u30AA\u30B5\u30A6\u30EB\u30B9</h1>
+	<div class="${"center"}"><img src="${"/ples.jpg"}" alt="${"main"}" width="${"72%"}"></div>
+	<div class="${"border margin-side-big"}"><p><strong>\u30D7\u30EC\u30B7\u30AA\u30B5\u30A6\u30EB\u30B9\uFF08Plesiosaurus\uFF09\u306F\u4E2D\u751F\u4EE3\u30B8\u30E5\u30E9\u7D00\u524D\u671F\u306B\u68F2\u606F\u3057\u3066\u3044\u305F\u9996\u9577\u7ADC\u306E\u5C5E\u306E\u4E00\u3064\u3067\u3042\u308B\u3002\u9996\u9577\u7ADC\u76EE
+				- \u30D7\u30EC\u30B7\u30AA\u30B5\u30A6\u30EB\u30B9\u79D1\u306B\u5C5E\u3059\u308B\u3002
+				\u767A\u898B\u5F53\u521D\u306F\u6C34\u68F2\u306E\u751F\u304D\u7269\u3067\u3042\u308B\u3053\u3068\u304B\u3089\u300C\u9B5A\u985E\u3068\u722C\u866B\u985E\u306E\u4E2D\u9593\u7684\u751F\u7269\u3001\u305D\u306E\u4E2D\u3067\u3082\u722C\u866B\u985E\u306B\u3088\u308A\u8FD1\u3044\u300D\u3068\u63A8\u6E2C\u3055\u308C\u3001\u305D\u3053\u304B\u3089plesiosaurus=\u300C\u722C\u866B\u985E\u306B\u8FD1\u4F3C\u3057\u305F\u300D\u3092\u610F\u5473\u3059\u308B\u5C5E\u540D\u304C\u3064\u3051\u3089\u308C\u305F\u3002
+				\u51FA\u5178\uFF1Awikipedia
+			</strong></p></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/deinonychus-f6f61132.js
-var deinonychus_f6f61132_exports = {};
-__export(deinonychus_f6f61132_exports, {
+// .svelte-kit/output/server/chunks/deinonychus-65b027ee.js
+var deinonychus_65b027ee_exports = {};
+__export(deinonychus_65b027ee_exports, {
   default: () => Deinonychus
 });
 var Deinonychus;
-var init_deinonychus_f6f61132 = __esm({
-  ".svelte-kit/output/server/chunks/deinonychus-f6f61132.js"() {
+var init_deinonychus_65b027ee = __esm({
+  ".svelte-kit/output/server/chunks/deinonychus-65b027ee.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist3();
-    init_header_cb5eea54();
+    init_header_5e1d5600();
     init_dist();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     Deinonychus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
       $$unsubscribe_authStore();
       return `
 ${validate_component(Header, "Header").$$render($$result, { back: true }, {}, {})}
-<h1>\u30C7\u30A3\u30CB\u30CE\u30CB\u30AF\u30B9</h1>
-<img src="${"/deino.jpg"}" alt="${"main"}" width="${"80%"}">
-<p>\u30C7\u30A4\u30CE\u30CB\u30AF\u30B9 (Deinonychus) \u306F\u3001\u767D\u4E9C\u7D00\u524D\u671F\uFF08\u30A2\u30D7\u30C1\u30A2\u30F3\u4E2D\u671F\u304B\u3089\u30A2\u30EB\u30D3\u30A2\u30F3\u5148\u671F\u3001\u7D041\u51041,500\u4E07 -
-	1\u5104800\u4E07\u5E74\u524D\uFF09\u306E\u5317\u30A2\u30E1\u30EA\u30AB\u306B\u751F\u606F\u3057\u305F\u7ADC\u76E4\u76EE\u30C9\u30ED\u30DE\u30A8\u30AA\u30B5\u30A6\u30EB\u30B9\u79D1\u306E\u4EE3\u8868\u7684\u306A\u8089\u98DF\u6050\u7ADC\u3002
-	\u672C\u7A2E\u306E\u547D\u540D\u306B\u4F34\u3046\u8AD6\u4E89\u304C\u6050\u7ADC\u30EB\u30CD\u30B5\u30F3\u30B9\u3068\u3057\u3066\u4E16\u754C\u7684\u306A\u5909\u9769\u3092\u4FC3\u3057\u305F\u3002 \u51FA\u5178\uFF1Awikipedia
-</p>`;
+<div><h1 class="${"margin-left"}">\u30C7\u30A3\u30CB\u30CE\u30CB\u30AF\u30B9</h1>
+	<div class="${"center"}"><img src="${"/deino.jpg"}" alt="${"main"}" width="${"72%"}"></div>
+	<div class="${"border margin-side-big"}"><p><strong>\u30C7\u30A4\u30CE\u30CB\u30AF\u30B9 (Deinonychus) \u306F\u3001\u767D\u4E9C\u7D00\u524D\u671F\uFF08\u30A2\u30D7\u30C1\u30A2\u30F3\u4E2D\u671F\u304B\u3089\u30A2\u30EB\u30D3\u30A2\u30F3\u5148\u671F\u3001\u7D041\u51041,500\u4E07 -
+				1\u5104800\u4E07\u5E74\u524D\uFF09\u306E\u5317\u30A2\u30E1\u30EA\u30AB\u306B\u751F\u606F\u3057\u305F\u7ADC\u76E4\u76EE\u30C9\u30ED\u30DE\u30A8\u30AA\u30B5\u30A6\u30EB\u30B9\u79D1\u306E\u4EE3\u8868\u7684\u306A\u8089\u98DF\u6050\u7ADC\u3002
+				\u672C\u7A2E\u306E\u547D\u540D\u306B\u4F34\u3046\u8AD6\u4E89\u304C\u6050\u7ADC\u30EB\u30CD\u30B5\u30F3\u30B9\u3068\u3057\u3066\u4E16\u754C\u7684\u306A\u5909\u9769\u3092\u4FC3\u3057\u305F\u3002 \u51FA\u5178\uFF1Awikipedia
+			</strong></p></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/ammonoidea-b1933827.js
-var ammonoidea_b1933827_exports = {};
-__export(ammonoidea_b1933827_exports, {
+// .svelte-kit/output/server/chunks/ammonoidea-acf24f50.js
+var ammonoidea_acf24f50_exports = {};
+__export(ammonoidea_acf24f50_exports, {
   default: () => Ammonoidea
 });
 var Ammonoidea;
-var init_ammonoidea_b1933827 = __esm({
-  ".svelte-kit/output/server/chunks/ammonoidea-b1933827.js"() {
+var init_ammonoidea_acf24f50 = __esm({
+  ".svelte-kit/output/server/chunks/ammonoidea-acf24f50.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist3();
-    init_header_cb5eea54();
+    init_header_5e1d5600();
     init_dist();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     Ammonoidea = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
@@ -48518,74 +48511,75 @@ ${validate_component(Header, "Header").$$render($$result, { back: true }, {}, {}
   }
 });
 
-// .svelte-kit/output/server/chunks/oviraptor-1cead8af.js
-var oviraptor_1cead8af_exports = {};
-__export(oviraptor_1cead8af_exports, {
+// .svelte-kit/output/server/chunks/oviraptor-a2f0fec6.js
+var oviraptor_a2f0fec6_exports = {};
+__export(oviraptor_a2f0fec6_exports, {
   default: () => Oviraptor
 });
 var Oviraptor;
-var init_oviraptor_1cead8af = __esm({
-  ".svelte-kit/output/server/chunks/oviraptor-1cead8af.js"() {
+var init_oviraptor_a2f0fec6 = __esm({
+  ".svelte-kit/output/server/chunks/oviraptor-a2f0fec6.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_firebase_2f3bb5ce();
+    init_app_684b5cfd();
+    init_firebase_81019538();
     init_dist3();
-    init_header_cb5eea54();
+    init_header_5e1d5600();
     init_dist();
     init_dist2();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     Oviraptor = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_authStore;
       $$unsubscribe_authStore = subscribe(authStore, (value) => value);
       $$unsubscribe_authStore();
       return `
 ${validate_component(Header, "Header").$$render($$result, { back: true }, {}, {})}
-<h1>\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u306E\u5375</h1>
-<img src="${"/ovi.jpg"}" alt="${"main"}" width="${"80%"}">
-<p>\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\uFF08\u5B66\u540D:Oviraptor\u3001\u300C\u5375\u6CE5\u68D2\u300D\u306E\u610F)
-	\u30ED\u30A4\u30FB\u30C1\u30E3\u30C3\u30D7\u30DE\u30F3\u30FB\u30A2\u30F3\u30C9\u30EA\u30E5\u30FC\u30B9\u7387\u3044\u308B\u9060\u5F81\u3067\u30B8\u30E7\u30FC\u30B8\u30FB\u30AA\u30EB\u30BB\u30F3\u304C\u767A\u898B\u3057\u3001\u30D8\u30F3\u30EA\u30FC\u30FB\u30AA\u30BA\u30DC\u30FC\u30F3\u304C1924\u5E74\u306B\u6700\u521D\u306B\u8A18\u8F09\u3057\u305F\u3001\u30E2\u30F3\u30B4\u30EB\u306E\u5C0F\u578B\u7363\u811A\u985E\u306E\u6050\u7ADC\u306E\u5C5E\u3002
-	\u5B66\u540D\u306F\u30E9\u30C6\u30F3\u8A9E\u3067\u300C\u5375\u6CE5\u68D2\u300D\u300C\u5375\u3092\u6CA1\u53CE\u3059\u308B\u8005\u300D\u3092\u610F\u5473\u3057\u3001\u3053\u308C\u306F\u30D7\u30ED\u30C8\u30B1\u30E9\u30C8\u30D7\u30B9\u306E\u3082\u306E\u3068\u8003\u3048\u3089\u308C\u3066\u3044\u305F\u5927\u91CF\u306E\u5375\u306E\u4E0A\u306B\u6700\u521D\u306E\u5316\u77F3\u6A19\u672C\u304C\u767A\u898B\u3055\u308C\u305F\u3053\u3068\u3092\u53CD\u6620\u3057\u3066\u3044\u308B\u3002
-	1924\u5E74\u306E\u5F7C\u306E\u8AD6\u6587\u3067\u30AA\u30BA\u30DC\u30FC\u30F3\u306F\u3001\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u306E\u982D\u9AA8\u304C\u5375\u304B\u3089\u308F\u305A\u304B4\u30BB\u30F3\u30C1\u30E1\u30FC\u30C8\u30EB\u3057\u304B\u96E2\u308C\u3066\u3044\u306A\u3044\u3068\u3044\u3046\u3001\u5DE3\u306B\u6975\u3081\u3066\u8FD1\u3044\u4F4D\u7F6E\u304B\u3089\u767A\u898B\u3055\u308C\u305F\u3053\u3068\u3092\u547D\u540D\u306E\u7406\u7531\u3068\u3057\u305F\u3002
-	\u3057\u304B\u3057\u3001\u30AA\u30BA\u30DC\u30FC\u30F3\u306F\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u3068\u3044\u3046\u540D\u524D\u306F\u305D\u306E\u6442\u98DF\u884C\u52D5\u306B\u3064\u3044\u3066\u30DF\u30B9\u30EA\u30FC\u30C9\u3092\u8A98\u3044\u3001\u7279\u6027\u3092\u507D\u3063\u3066\u793A\u3057\u3066\u3044\u308B\u304B\u3082\u3057\u308C\u306A\u3044\u3068\u3082\u63D0\u6848\u3057\u305F\u3002
-	1990\u5E74\u4EE3\u306B\u3001\u5DE3\u3092\u4F5C\u308B\u30B7\u30C1\u30D1\u30C1\u306E\u3088\u3046\u306A\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u79D1\u304C\u767A\u898B\u3055\u308C\u3001\u540D\u524D\u306B\u95A2\u3059\u308B\u30AA\u30BA\u30DC\u30FC\u30F3\u306E\u6CE8\u610F\u304C\u6B63\u3057\u304B\u3063\u305F\u3053\u3068\u304C\u8A3C\u660E\u3055\u308C\u305F\u3002
-	\u3053\u308C\u3089\u306E\u767A\u898B\u304B\u3089\u3001\u5375\u306F\u304A\u305D\u3089\u304F\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u305D\u306E\u3082\u306E\u306E\u5375\u3067\u3042\u308A\u3001\u6A19\u672C\u306E\u500B\u4F53\u306F\u5B9F\u969B\u306B\u306F\u5375\u3092\u5B75\u5316\u3055\u305B\u3088\u3046\u3068\u3057\u3066\u3044\u3066\u5DE3\u3067\u6B7B\u4EA1\u3057\u305F\u306E\u3060\u3063\u305F\u3002
-	\u51FA\u5178\uFF1Awikipedia
-</p>`;
+
+<div><h1 class="${"margin-left"}">\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u306E\u5375</h1>
+	<div class="${"center"}"><img src="${"/ovi.jpg"}" alt="${"main"}" width="${"72%"}"></div>
+	<div class="${"border margin-side-big"}"><p><strong>\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\uFF08\u5B66\u540D:Oviraptor\u3001\u300C\u5375\u6CE5\u68D2\u300D\u306E\u610F)
+				\u30ED\u30A4\u30FB\u30C1\u30E3\u30C3\u30D7\u30DE\u30F3\u30FB\u30A2\u30F3\u30C9\u30EA\u30E5\u30FC\u30B9\u7387\u3044\u308B\u9060\u5F81\u3067\u30B8\u30E7\u30FC\u30B8\u30FB\u30AA\u30EB\u30BB\u30F3\u304C\u767A\u898B\u3057\u3001\u30D8\u30F3\u30EA\u30FC\u30FB\u30AA\u30BA\u30DC\u30FC\u30F3\u304C1924\u5E74\u306B\u6700\u521D\u306B\u8A18\u8F09\u3057\u305F\u3001\u30E2\u30F3\u30B4\u30EB\u306E\u5C0F\u578B\u7363\u811A\u985E\u306E\u6050\u7ADC\u306E\u5C5E\u3002
+				\u5B66\u540D\u306F\u30E9\u30C6\u30F3\u8A9E\u3067\u300C\u5375\u6CE5\u68D2\u300D\u300C\u5375\u3092\u6CA1\u53CE\u3059\u308B\u8005\u300D\u3092\u610F\u5473\u3057\u3001\u3053\u308C\u306F\u30D7\u30ED\u30C8\u30B1\u30E9\u30C8\u30D7\u30B9\u306E\u3082\u306E\u3068\u8003\u3048\u3089\u308C\u3066\u3044\u305F\u5927\u91CF\u306E\u5375\u306E\u4E0A\u306B\u6700\u521D\u306E\u5316\u77F3\u6A19\u672C\u304C\u767A\u898B\u3055\u308C\u305F\u3053\u3068\u3092\u53CD\u6620\u3057\u3066\u3044\u308B\u3002
+				1924\u5E74\u306E\u5F7C\u306E\u8AD6\u6587\u3067\u30AA\u30BA\u30DC\u30FC\u30F3\u306F\u3001\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u306E\u982D\u9AA8\u304C\u5375\u304B\u3089\u308F\u305A\u304B4\u30BB\u30F3\u30C1\u30E1\u30FC\u30C8\u30EB\u3057\u304B\u96E2\u308C\u3066\u3044\u306A\u3044\u3068\u3044\u3046\u3001\u5DE3\u306B\u6975\u3081\u3066\u8FD1\u3044\u4F4D\u7F6E\u304B\u3089\u767A\u898B\u3055\u308C\u305F\u3053\u3068\u3092\u547D\u540D\u306E\u7406\u7531\u3068\u3057\u305F\u3002
+				\u3057\u304B\u3057\u3001\u30AA\u30BA\u30DC\u30FC\u30F3\u306F\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u3068\u3044\u3046\u540D\u524D\u306F\u305D\u306E\u6442\u98DF\u884C\u52D5\u306B\u3064\u3044\u3066\u30DF\u30B9\u30EA\u30FC\u30C9\u3092\u8A98\u3044\u3001\u7279\u6027\u3092\u507D\u3063\u3066\u793A\u3057\u3066\u3044\u308B\u304B\u3082\u3057\u308C\u306A\u3044\u3068\u3082\u63D0\u6848\u3057\u305F\u3002
+				1990\u5E74\u4EE3\u306B\u3001\u5DE3\u3092\u4F5C\u308B\u30B7\u30C1\u30D1\u30C1\u306E\u3088\u3046\u306A\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u79D1\u304C\u767A\u898B\u3055\u308C\u3001\u540D\u524D\u306B\u95A2\u3059\u308B\u30AA\u30BA\u30DC\u30FC\u30F3\u306E\u6CE8\u610F\u304C\u6B63\u3057\u304B\u3063\u305F\u3053\u3068\u304C\u8A3C\u660E\u3055\u308C\u305F\u3002
+				\u3053\u308C\u3089\u306E\u767A\u898B\u304B\u3089\u3001\u5375\u306F\u304A\u305D\u3089\u304F\u30AA\u30F4\u30A3\u30E9\u30D7\u30C8\u30EB\u305D\u306E\u3082\u306E\u306E\u5375\u3067\u3042\u308A\u3001\u6A19\u672C\u306E\u500B\u4F53\u306F\u5B9F\u969B\u306B\u306F\u5375\u3092\u5B75\u5316\u3055\u305B\u3088\u3046\u3068\u3057\u3066\u3044\u3066\u5DE3\u3067\u6B7B\u4EA1\u3057\u305F\u306E\u3060\u3063\u305F\u3002
+				\u51FA\u5178\uFF1Awikipedia
+			</strong></p></div></div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/error-6041ccbf.js
-var error_6041ccbf_exports = {};
-__export(error_6041ccbf_exports, {
+// .svelte-kit/output/server/chunks/error-72e27bac.js
+var error_72e27bac_exports = {};
+__export(error_72e27bac_exports, {
   default: () => Error3
 });
 var Error3;
-var init_error_6041ccbf = __esm({
-  ".svelte-kit/output/server/chunks/error-6041ccbf.js"() {
+var init_error_72e27bac = __esm({
+  ".svelte-kit/output/server/chunks/error-72e27bac.js"() {
     init_shims();
-    init_app_1d5fe74a();
+    init_app_684b5cfd();
     Error3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<h1>404</h1>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/test-137fb18e.js
-var test_137fb18e_exports = {};
-__export(test_137fb18e_exports, {
+// .svelte-kit/output/server/chunks/test-8827e295.js
+var test_8827e295_exports = {};
+__export(test_8827e295_exports, {
   default: () => Test
 });
 var Test;
-var init_test_137fb18e = __esm({
-  ".svelte-kit/output/server/chunks/test-137fb18e.js"() {
+var init_test_8827e295 = __esm({
+  ".svelte-kit/output/server/chunks/test-8827e295.js"() {
     init_shims();
-    init_app_1d5fe74a();
+    init_app_684b5cfd();
     init_dist3();
-    init_firebase_2f3bb5ce();
-    init_Button_68fa6d31();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_firebase_81019538();
+    init_Button_37dd6f2f();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     init_dist();
     init_dist2();
     Test = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -58561,23 +58555,23 @@ var require_jsQR = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/qr-b37be35c.js
-var qr_b37be35c_exports = {};
-__export(qr_b37be35c_exports, {
+// .svelte-kit/output/server/chunks/qr-42d0cf65.js
+var qr_42d0cf65_exports = {};
+__export(qr_42d0cf65_exports, {
   default: () => Qr
 });
 var import_jsqr, Fossil, Zukan, QrReader, Qr;
-var init_qr_b37be35c = __esm({
-  ".svelte-kit/output/server/chunks/qr-b37be35c.js"() {
+var init_qr_42d0cf65 = __esm({
+  ".svelte-kit/output/server/chunks/qr-42d0cf65.js"() {
     init_shims();
-    init_app_1d5fe74a();
-    init_header_cb5eea54();
-    init_firebase_2f3bb5ce();
-    init_HeaderSearch_svelte_svelte_type_style_lang_2861dc94();
+    init_app_684b5cfd();
+    init_header_5e1d5600();
+    init_firebase_81019538();
+    init_HeaderSearch_svelte_svelte_type_style_lang_e6cba394();
     init_dist3();
     import_jsqr = __toModule(require_jsQR());
     init_dist2();
-    init_Button_68fa6d31();
+    init_Button_37dd6f2f();
     init_dist();
     Fossil = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { name: name2 } = $$props;
@@ -58603,7 +58597,7 @@ var init_qr_b37be35c = __esm({
         class: "auma",
         noGutter: true
       }, {}, {
-        default: () => `<img src="${"non.jpg"}" width="${"80%"}">
+        default: () => `<img src="${"non.jpg"}" alt="${"noimage"}" width="${"80%"}">
 			<div class="${"margin-small center margin-middle"}">\u672A\u767A\u898B</div>`
       })}`}
 `}`;
@@ -58646,7 +58640,7 @@ ${validate_component(Zukan, "Zukan").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/app-1d5fe74a.js
+// .svelte-kit/output/server/chunks/app-684b5cfd.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -59014,7 +59008,7 @@ async function render_response({
   error: error2,
   page
 }) {
-  const css22 = new Set(options2.entry.css);
+  const css2 = new Set(options2.entry.css);
   const js = new Set(options2.entry.js);
   const styles = new Set();
   const serialized_data = [];
@@ -59027,7 +59021,7 @@ async function render_response({
   if (page_config.ssr) {
     branch.forEach(({ node, loaded, fetched, uses_credentials }) => {
       if (node.css)
-        node.css.forEach((url) => css22.add(url));
+        node.css.forEach((url) => css2.add(url));
       if (node.js)
         node.js.forEach((url) => js.add(url));
       if (node.styles)
@@ -59070,7 +59064,7 @@ async function render_response({
     js.clear();
   const links = options2.amp ? styles.size > 0 || rendered.css.code.length > 0 ? `<style amp-custom>${Array.from(styles).concat(rendered.css.code).join("\n")}</style>` : "" : [
     ...Array.from(js).map((dep) => `<link rel="modulepreload" href="${dep}">`),
-    ...Array.from(css22).map((dep) => `<link rel="stylesheet" href="${dep}">`)
+    ...Array.from(css2).map((dep) => `<link rel="stylesheet" href="${dep}">`)
   ].join("\n		");
   let init2 = "";
   if (options2.amp) {
@@ -59979,7 +59973,7 @@ function create_ssr_component(fn) {
       return {
         html,
         css: {
-          code: Array.from(result.css).map((css22) => css22.code).join("\n"),
+          code: Array.from(result.css).map((css2) => css2.code).join("\n"),
           map: null
         },
         head: result.title + result.head
@@ -60012,9 +60006,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-c405fa3c.js",
+      file: assets + "/_app/start-69c28b6a.js",
       css: [assets + "/_app/assets/start-61d1577b.css", assets + "/_app/assets/vendor-30b899a4.css"],
-      js: [assets + "/_app/start-c405fa3c.js", assets + "/_app/chunks/vendor-c2717d7f.js", assets + "/_app/chunks/singletons-12a22614.js"]
+      js: [assets + "/_app/start-69c28b6a.js", assets + "/_app/chunks/vendor-c2717d7f.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -60042,11 +60036,11 @@ function init(settings = default_settings) {
   };
 }
 async function load_component(file) {
-  const { entry, css: css22, js, styles } = metadata_lookup[file];
+  const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
     module: await module_lookup[file](),
     entry: assets + "/_app/" + entry,
-    css: css22.map((dep) => assets + "/_app/" + dep),
+    css: css2.map((dep) => assets + "/_app/" + dep),
     js: js.map((dep) => assets + "/_app/" + dep),
     styles
   };
@@ -60057,9 +60051,9 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender });
 }
-var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, boolean_attributes, invalid_attribute_name_character, escaped, missing_component, on_destroy, css2, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_1d5fe74a = __esm({
-  ".svelte-kit/output/server/chunks/app-1d5fe74a.js"() {
+var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, boolean_attributes, invalid_attribute_name_character, escaped, missing_component, on_destroy, css, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_684b5cfd = __esm({
+  ".svelte-kit/output/server/chunks/app-684b5cfd.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -60202,7 +60196,7 @@ var init_app_1d5fe74a = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css2 = {
+    css = {
       code: "#svelte-announcer.svelte-1j55zn5{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
@@ -60227,7 +60221,7 @@ var init_app_1d5fe74a = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css2);
+      $$result.css.add(css);
       {
         stores.page.set(page);
       }
@@ -60336,20 +60330,20 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_7a461c6f(), layout_7a461c6f_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_40563a89(), error_40563a89_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_1b825995(), index_1b825995_exports)),
-      "src/routes/fossil/polypodiopsida.svelte": () => Promise.resolve().then(() => (init_polypodiopsida_db1775cf(), polypodiopsida_db1775cf_exports)),
-      "src/routes/fossil/tyrannosaurus.svelte": () => Promise.resolve().then(() => (init_tyrannosaurus_bb65fb42(), tyrannosaurus_bb65fb42_exports)),
-      "src/routes/fossil/plesiosaurus.svelte": () => Promise.resolve().then(() => (init_plesiosaurus_78d65ff5(), plesiosaurus_78d65ff5_exports)),
-      "src/routes/fossil/deinonychus.svelte": () => Promise.resolve().then(() => (init_deinonychus_f6f61132(), deinonychus_f6f61132_exports)),
-      "src/routes/fossil/ammonoidea.svelte": () => Promise.resolve().then(() => (init_ammonoidea_b1933827(), ammonoidea_b1933827_exports)),
-      "src/routes/fossil/oviraptor.svelte": () => Promise.resolve().then(() => (init_oviraptor_1cead8af(), oviraptor_1cead8af_exports)),
-      "src/routes/error.svelte": () => Promise.resolve().then(() => (init_error_6041ccbf(), error_6041ccbf_exports)),
-      "src/routes/test.svelte": () => Promise.resolve().then(() => (init_test_137fb18e(), test_137fb18e_exports)),
-      "src/routes/qr.svelte": () => Promise.resolve().then(() => (init_qr_b37be35c(), qr_b37be35c_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_67a65ac1(), layout_67a65ac1_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_5b8b9a6f(), error_5b8b9a6f_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_afecc7b6(), index_afecc7b6_exports)),
+      "src/routes/fossil/polypodiopsida.svelte": () => Promise.resolve().then(() => (init_polypodiopsida_19e53b32(), polypodiopsida_19e53b32_exports)),
+      "src/routes/fossil/tyrannosaurus.svelte": () => Promise.resolve().then(() => (init_tyrannosaurus_9d80b35b(), tyrannosaurus_9d80b35b_exports)),
+      "src/routes/fossil/plesiosaurus.svelte": () => Promise.resolve().then(() => (init_plesiosaurus_36dd980b(), plesiosaurus_36dd980b_exports)),
+      "src/routes/fossil/deinonychus.svelte": () => Promise.resolve().then(() => (init_deinonychus_65b027ee(), deinonychus_65b027ee_exports)),
+      "src/routes/fossil/ammonoidea.svelte": () => Promise.resolve().then(() => (init_ammonoidea_acf24f50(), ammonoidea_acf24f50_exports)),
+      "src/routes/fossil/oviraptor.svelte": () => Promise.resolve().then(() => (init_oviraptor_a2f0fec6(), oviraptor_a2f0fec6_exports)),
+      "src/routes/error.svelte": () => Promise.resolve().then(() => (init_error_72e27bac(), error_72e27bac_exports)),
+      "src/routes/test.svelte": () => Promise.resolve().then(() => (init_test_8827e295(), test_8827e295_exports)),
+      "src/routes/qr.svelte": () => Promise.resolve().then(() => (init_qr_42d0cf65(), qr_42d0cf65_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-0e6802e8.js", "css": ["assets/pages/__layout.svelte-87c08136.css", "assets/vendor-30b899a4.css"], "js": ["pages/__layout.svelte-0e6802e8.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-b64d0a61.js", "css": ["assets/vendor-30b899a4.css"], "js": ["error.svelte-b64d0a61.js", "chunks/vendor-c2717d7f.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-38649b37.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/index.svelte-38649b37.js", "chunks/vendor-c2717d7f.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/firebase-943ac691.js"], "styles": [] }, "src/routes/fossil/polypodiopsida.svelte": { "entry": "pages/fossil/polypodiopsida.svelte-345f6252.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/fossil/polypodiopsida.svelte-345f6252.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/tyrannosaurus.svelte": { "entry": "pages/fossil/tyrannosaurus.svelte-65737a49.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/fossil/tyrannosaurus.svelte-65737a49.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/plesiosaurus.svelte": { "entry": "pages/fossil/plesiosaurus.svelte-d9564f19.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/fossil/plesiosaurus.svelte-d9564f19.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/deinonychus.svelte": { "entry": "pages/fossil/deinonychus.svelte-c556214a.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/fossil/deinonychus.svelte-c556214a.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/ammonoidea.svelte": { "entry": "pages/fossil/ammonoidea.svelte-7face270.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/fossil/ammonoidea.svelte-7face270.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/oviraptor.svelte": { "entry": "pages/fossil/oviraptor.svelte-fbca0bc8.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/fossil/oviraptor.svelte-fbca0bc8.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/error.svelte": { "entry": "pages/error.svelte-a940624a.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/error.svelte-a940624a.js", "chunks/vendor-c2717d7f.js"], "styles": [] }, "src/routes/test.svelte": { "entry": "pages/test.svelte-51ca2fc2.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/test.svelte-51ca2fc2.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js"], "styles": [] }, "src/routes/qr.svelte": { "entry": "pages/qr.svelte-8e797c6a.js", "css": ["assets/vendor-30b899a4.css", "assets/header-575b8353.css"], "js": ["pages/qr.svelte-8e797c6a.js", "chunks/vendor-c2717d7f.js", "chunks/header-a5add63e.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/firebase-943ac691.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-0e6802e8.js", "css": ["assets/pages/__layout.svelte-87c08136.css", "assets/vendor-30b899a4.css"], "js": ["pages/__layout.svelte-0e6802e8.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-b64d0a61.js", "css": ["assets/vendor-30b899a4.css"], "js": ["error.svelte-b64d0a61.js", "chunks/vendor-c2717d7f.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-c0d51aee.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/index.svelte-c0d51aee.js", "chunks/vendor-c2717d7f.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/firebase-943ac691.js"], "styles": [] }, "src/routes/fossil/polypodiopsida.svelte": { "entry": "pages/fossil/polypodiopsida.svelte-9e981224.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/fossil/polypodiopsida.svelte-9e981224.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/tyrannosaurus.svelte": { "entry": "pages/fossil/tyrannosaurus.svelte-e90fe3fe.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/fossil/tyrannosaurus.svelte-e90fe3fe.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/plesiosaurus.svelte": { "entry": "pages/fossil/plesiosaurus.svelte-7ff218e5.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/fossil/plesiosaurus.svelte-7ff218e5.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/deinonychus.svelte": { "entry": "pages/fossil/deinonychus.svelte-fe3613e0.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/fossil/deinonychus.svelte-fe3613e0.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/ammonoidea.svelte": { "entry": "pages/fossil/ammonoidea.svelte-d5ad065a.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/fossil/ammonoidea.svelte-d5ad065a.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/fossil/oviraptor.svelte": { "entry": "pages/fossil/oviraptor.svelte-65fe2ded.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/fossil/oviraptor.svelte-65fe2ded.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/error.svelte": { "entry": "pages/error.svelte-a940624a.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/error.svelte-a940624a.js", "chunks/vendor-c2717d7f.js"], "styles": [] }, "src/routes/test.svelte": { "entry": "pages/test.svelte-51ca2fc2.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/test.svelte-51ca2fc2.js", "chunks/vendor-c2717d7f.js", "chunks/firebase-943ac691.js"], "styles": [] }, "src/routes/qr.svelte": { "entry": "pages/qr.svelte-320595e7.js", "css": ["assets/vendor-30b899a4.css"], "js": ["pages/qr.svelte-320595e7.js", "chunks/vendor-c2717d7f.js", "chunks/header-30dfa62a.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/firebase-943ac691.js"], "styles": [] } };
   }
 });
 
@@ -60402,7 +60396,7 @@ function getRawBody(req) {
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_1d5fe74a();
+init_app_684b5cfd();
 
 // .svelte-kit/vercel/entry.js
 init();

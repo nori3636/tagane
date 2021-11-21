@@ -42,15 +42,8 @@
 				<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
 			</div></Column
 		>
-		<Column class="right">
-			<Button kind="secondary" on:click={logoutWithGoogle}><p>ログアウト</p></Button>
-		</Column>
 	</Row>
 </slot>
 
 <style>
-	p {
-		font-size: 50%;
-		text-align: center;
-	}
 </style>
