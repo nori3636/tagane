@@ -30,11 +30,25 @@
 <slot>
 	<Row>
 		{#if back}
-			<Column><div class="left"><Button on:click={backqr}>←戻る</Button></div></Column>
+			<Column class="left">
+				<Button kind="secondary" on:click={backqr}><p>←戻る</p></Button>
+			</Column>
 		{/if}
-		<Column><div class="center"><ImageLoader src="\tagane_black.png" /></div></Column>
-		<Column><div class="right"><Button on:click={logoutWithGoogle}>ログアウト</Button></div></Column
+		<Column>
+			<div class="center">
+				<ImageLoader src="\tagane_black.png" />
+			</div>
+			<h4 class="margin-small"><p>{$authStore.username + ' さん'}</p></h4></Column
 		>
+		<Column class="right">
+			<Button kind="secondary" on:click={logoutWithGoogle}><p>ログアウト</p></Button>
+		</Column>
 	</Row>
-	<Column><h4 class="margin-small">{$authStore.username + ' さん'}</h4></Column>
 </slot>
+
+<style>
+	p {
+		font-size: 50%;
+		text-align: center;
+	}
+</style>
