@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { QRCode } from 'jsqr';
 	import { goto } from '$app/navigation';
 	import jsQR from 'jsqr';
 	import { onMount } from 'svelte';
@@ -7,7 +8,6 @@
 		const video = document.createElement('video');
 		const canvas = <HTMLCanvasElement>document.getElementById('canvas');
 		const ctx = canvas.getContext('2d');
-		const msg = document.getElementById('msg');
 		const userMedia = { video: { facingMode: 'environment' } };
 
 		navigator.mediaDevices.getUserMedia(userMedia).then((stream) => {
@@ -38,14 +38,15 @@
 			setTimeout(startTick, 100);
 		}
 
-		function drawRect(location) {
+		function drawRect(location: QRCode['location']) {
 			drawLine(location.topLeftCorner, location.topRightCorner);
 			drawLine(location.topRightCorner, location.bottomRightCorner);
 			drawLine(location.bottomRightCorner, location.bottomLeftCorner);
 			drawLine(location.bottomLeftCorner, location.topLeftCorner);
 		}
 
-		function drawLine(begin, end) {
+		type Point = { x: number; y: number; };
+		function drawLine(begin: Point, end: Point) {
 			ctx.lineWidth = 4;
 			ctx.strokeStyle = '#FF3B58';
 			ctx.beginPath();

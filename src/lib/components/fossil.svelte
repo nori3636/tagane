@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Column, ImageLoader, Row } from 'carbon-components-svelte';
+	import { Column } from 'carbon-components-svelte';
 
 	export let name: string;
 	export let show: boolean;

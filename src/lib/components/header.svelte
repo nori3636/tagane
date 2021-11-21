@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { authStore } from '$lib/authStore';
-	import { getAuth, signOut } from 'firebase/auth';
-	import { Row, Column, Button, ImageLoader } from 'carbon-components-svelte';
 	import { goto } from '$app/navigation';
-	import { auth, checkio } from '$lib/firebase';
+	import { Button,Column,ImageLoader,Row } from 'carbon-components-svelte';
+	import { getAuth,signOut } from 'firebase/auth';
 
 	export let back: boolean;
-	let dataFetchingPromise;
 	async function logoutWithGoogle() {
 		try {
 			const auth = getAuth();

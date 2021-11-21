@@ -1,9 +1,5 @@
 <script>
-	import { auth, checkio } from '../lib/firebase';
 	import { onMount } from 'svelte';
-	import { authStore } from '$lib/authStore';
-	import { onAuthStateChanged } from 'firebase/auth';
-	import { goto } from '$app/navigation';
 	import '../app.css';
 	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 

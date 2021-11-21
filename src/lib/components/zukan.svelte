@@ -1,12 +1,10 @@
 <script>
+	import { authStore } from '$lib/authStore';
+	import { Row } from 'carbon-components-svelte';
+	import { doc,getDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 	import { db } from '../firebase';
 	import Fossil from './fossil.svelte';
-	import { doc, getDoc } from 'firebase/firestore';
-	import { authStore } from '$lib/authStore';
-	import { Column, Row } from 'carbon-components-svelte';
-
-	let testjson;
 
 	let dataFetchingPromise;
 
@@ -16,7 +14,6 @@
 		if (docSnap.exists()) {
 			console.log('Document data:', docSnap.data());
 			console.log(docSnap.data());
-			testjson = docSnap.data();
 			return docSnap.data();
 		} else {
 			// doc.data() will be undefined in this case
@@ -41,7 +38,7 @@
 				{/each}
 			</Row>
 		</div>
-	{:catch err}
+	{:catch}
 		error!
 	{/await}
 </slot>
