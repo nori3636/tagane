@@ -85,11 +85,9 @@
 	});
 </script>
 
-<div>
-	<div width="80%">
-		<ImageLoader src="\tagane_black.png" />
-	</div>
-	<div class="center margin-big">
+<div class="top center high">
+	<div width="50%" class="center top">
+		<img src="\tagane_black.png" width="50%" />
 		<img
 			on:click={loginWithGoogle}
 			src="/login-with-google.png"

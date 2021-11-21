@@ -4,6 +4,7 @@
 	import Fossil from './fossil.svelte';
 	import { doc, getDoc } from 'firebase/firestore';
 	import { authStore } from '$lib/authStore';
+	import { Column, Row } from 'carbon-components-svelte';
 
 	let testjson;
 
@@ -33,9 +34,13 @@
 	{#await dataFetchingPromise}
 		loading...
 	{:then dataFetchingPromise}
-		{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
-			<Fossil name={key} show={value} />
-		{/each}
+		<div class="margin-small">
+			<Row class="center auma">
+				{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
+					<Fossil name={key} show={value} />
+				{/each}
+			</Row>
+		</div>
 	{:catch err}
 		error!
 	{/await}
