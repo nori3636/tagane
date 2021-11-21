@@ -1,9 +1,9 @@
-export default {
-	apiKey: 'AIzaSyB1rH9ic_JCJ_UNM8yzkUbCZ_wj2O9WnMo',
-	authDomain: 'tagane.firebaseapp.com',
-	projectId: 'tagane',
-	storageBucket: 'tagane.appspot.com',
-	messagingSenderId: '890413177050',
-	appId: '1:890413177050:web:a57d805f1d92576f7e6de3',
-	measurementId: 'G-PQKM3EK5S8'
+export const firebaseConfig = {
+	apiKey: import.meta.env.VITE_API_KEY.toString(),
+	authDomain: import.meta.env.VITE_AUTH_DOMAIN.toString(),
+	projectId: import.meta.env.VITE_PROJECT_ID.toString(),
+	storageBucket: import.meta.env.VITE_STORAGE_BUCKET.toString(),
+	messagingSenderId: import.meta.env.VITE_MESSAGE_SENDER_ID.toString(),
+	appId: import.meta.env.VITE_APP_ID.toString(),
+	measurementId: import.meta.env.VITE_MEASUREMENT_ID.toString(),
 };

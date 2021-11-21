@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-import firebaseConfig from '$lib/env';
+import { firebaseConfig } from '$lib/env';
 import { authStore } from './authStore';
 
 export const app = initializeApp(firebaseConfig);
