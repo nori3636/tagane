@@ -34,11 +34,13 @@
 	{#await dataFetchingPromise}
 		loading...
 	{:then dataFetchingPromise}
-		<Row>
-			{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
-				<Column sm={2}><Fossil name={key} show={value} /></Column>
-			{/each}
-		</Row>
+		<div class="margin-big">
+			<Row class="center" noGutter="true">
+				{#each Object.entries(dataFetchingPromise ?? {}) as [key, value]}
+					<Fossil name={key} show={value} />
+				{/each}
+			</Row>
+		</div>
 	{:catch err}
 		error!
 	{/await}
