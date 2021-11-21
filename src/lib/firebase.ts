@@ -14,7 +14,7 @@ export const checkio = onAuthStateChanged(auth, (user) => {
 		// User is signed in
 		authStore.set({
 			isLoggedIn: true,
-			username: user.displayName,
+			username: user.displayName ?? undefined,
 			userid: user.uid
 		});
 		console.log('login');

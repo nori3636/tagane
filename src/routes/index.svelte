@@ -8,6 +8,7 @@
 
 	async function exitdb() {
 		try {
+			if ($authStore.userid === undefined) return false;
 			const Ref = doc(db, 'fossil', $authStore.userid);
 			const docSnap = await getDoc(Ref);
 			return docSnap.exists();
@@ -52,7 +53,7 @@
 				// User is signed in
 				authStore.set({
 					isLoggedIn: true,
-					username: user.displayName,
+					username: user.displayName??undefined,
 					userid: user.uid
 				});
 				console.log('login');

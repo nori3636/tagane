@@ -18,6 +18,7 @@
 		});
 
 		function startTick() {
+			if (!ctx) throw new Error('Browser has no support for canvas 2d context');
 			console.log('Loading video...');
 			if (video.readyState === video.HAVE_ENOUGH_DATA) {
 				//canvas.height = video.videoHeight;
@@ -47,6 +48,7 @@
 
 		type Point = { x: number; y: number };
 		function drawLine(begin: Point, end: Point) {
+			if (!ctx) throw new Error('Browser has no support for canvas 2d context');
 			ctx.lineWidth = 4;
 			ctx.strokeStyle = '#FF3B58';
 			ctx.beginPath();

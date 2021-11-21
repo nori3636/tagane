@@ -7,6 +7,7 @@
 
 	async function updatedb() {
 		try {
+			if ($authStore.userid === undefined) return;
 			const Ref = doc(db, 'fossil', $authStore.userid);
 
 			await updateDoc(Ref, {

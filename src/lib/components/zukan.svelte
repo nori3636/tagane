@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { authStore } from '$lib/authStore';
 	import { Row } from 'carbon-components-svelte';
 	import { doc, getDoc } from 'firebase/firestore';
@@ -6,9 +6,10 @@
 	import { db } from '../firebase';
 	import Fossil from './fossil.svelte';
 
-	let dataFetchingPromise;
+	let dataFetchingPromise: Promise<Record<string, boolean> | undefined>;
 
 	async function getdb() {
+		if ($authStore.userid === undefined) return undefined;
 		const Ref = doc(db, 'fossil', $authStore.userid);
 		const docSnap = await getDoc(Ref);
 		if (docSnap.exists()) {

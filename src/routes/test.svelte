@@ -14,6 +14,7 @@
 
 	async function getdb() {
 		try {
+			if ($authStore.userid === undefined) return;
 			const Ref = doc(db, 'fossil', $authStore.userid);
 			const docSnap = await getDoc(Ref);
 			if (docSnap.exists()) {
@@ -29,6 +30,7 @@
 
 	async function updatedb() {
 		try {
+			if ($authStore.userid === undefined) return;
 			const washingtonRef = doc(db, 'fossil', $authStore.userid);
 
 			await updateDoc(washingtonRef, {
