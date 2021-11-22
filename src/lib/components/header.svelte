@@ -25,13 +25,13 @@
 </script>
 
 <Row>
-	{#if back}
-		<Column>
+	<Column>
+		{#if back}
 			<div class="left"><Button kind="secondary" on:click={backqr}>←戻る</Button></div>
-		</Column>
-	{:else}
-		<Column><div class="left margin-around" /></Column>
-	{/if}
+		{:else}
+			<div class="left margin-around" />
+		{/if}
+	</Column>
 	<Column><div class="center"><ImageLoader src="\tagane_black.png" /></div></Column>
 	<Column>
 		<div class="right">
