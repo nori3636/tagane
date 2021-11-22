@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { user } from '$lib/stores/user';
 	import { Button, Column, ImageLoader, Row } from 'carbon-components-svelte';
 	import { getAuth, signOut } from 'firebase/auth';
 
@@ -34,8 +35,10 @@
 	</Column>
 	<Column><div class="center"><ImageLoader src="/tagane_black.png" /></div></Column>
 	<Column>
-		<div class="right">
-			<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
-		</div>
+		{#if $user !== undefined}
+			<div class="right">
+				<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
+			</div>
+		{/if}
 	</Column>
 </Row>
