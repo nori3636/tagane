@@ -30,19 +30,17 @@
 		});
 	}
 	async function loginWithGoogle() {
-		try {
-			await signInWithPopup(auth, provider).then(() => {
-				goto('/qr').then(() => {
-					if (!exitdb()) {
-						add();
-					} else {
-						console.log('exit db!');
-					}
-				});
-			});
-		} catch (e) {
-			console.log(e);
-		}
+		return signInWithPopup(auth, provider)
+			.then(() => goto('/qr'))
+			.then(() => exitdb())
+			.then((alreadyExistDb) => {
+				if (!alreadyExistDb) {
+					console.log('exist db!');
+				} else {
+					return add();
+				}
+			})
+			.catch(console.log);
 	}
 </script>
 
