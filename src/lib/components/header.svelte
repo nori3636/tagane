@@ -7,18 +7,14 @@
 
 	export let back: boolean;
 	async function logoutWithGoogle() {
-		try {
-			await signOut(auth)
-				.then(() => {
-					console.log('goto前');
-					goto('/');
-				})
-				.catch((e) => {
-					console.log(e);
-				});
-		} catch (e) {
-			console.log(e);
-		}
+		return signOut(auth)
+			.then(() => {
+				console.log('goto前');
+				return goto('/');
+			})
+			.catch((e) => {
+				console.log(e);
+			});
 	}
 	async function backqr() {
 		await goto('/qr');
