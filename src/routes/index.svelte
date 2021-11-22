@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { db } from '$lib/firebase';
-	import { user as userStore } from '$lib/stores/user';
-	import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+	import { auth, db, provider } from '$lib/firebase';
+	import { user } from '$lib/stores/user';
+	import { signInWithPopup } from 'firebase/auth';
 	import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 	async function exitdb() {
 		try {
-			if ($userStore === undefined) return;
-			const Ref = doc(db, 'fossil', $userStore.id);
+			if ($user === undefined) return;
+			const Ref = doc(db, 'fossil', $user.id);
 			const docSnap = await getDoc(Ref);
 			return docSnap.exists();
 		} catch (e) {
@@ -18,8 +18,8 @@
 	}
 
 	async function add() {
-		if ($userStore === undefined) return;
-		const Ref = doc(db, 'fossil', $userStore.id);
+		if ($user === undefined) return;
+		const Ref = doc(db, 'fossil', $user.id);
 		await setDoc(Ref, {
 			ammmo: false,
 			deino: false,
@@ -31,8 +31,6 @@
 	}
 	async function loginWithGoogle() {
 		try {
-			const auth = getAuth();
-			const provider = new GoogleAuthProvider();
 			await signInWithPopup(auth, provider).then(() => {
 				goto('/qr').then(() => {
 					if (!exitdb()) {
