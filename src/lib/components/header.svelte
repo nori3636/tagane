@@ -31,10 +31,10 @@
 	</Column>
 	<Column><div class="center"><ImageLoader src="/tagane_black.png" /></div></Column>
 	<Column>
-		{#if $user !== undefined}
-			<div class="right">
+		<div class="right">
+			{#if $user !== undefined}
 				<Button kind="secondary" on:click={logoutWithGoogle}>ログアウト</Button>
-			</div>
-		{/if}
+			{/if}
+		</div>
 	</Column>
 </Row>
