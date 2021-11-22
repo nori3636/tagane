@@ -5,7 +5,7 @@
 	import { signInWithPopup } from 'firebase/auth';
 	import { doc, getDoc, setDoc } from 'firebase/firestore';
 
-	async function exitdb() {
+	async function existDb() {
 		try {
 			if ($user === undefined) return;
 			const Ref = doc(db, 'fossil', $user.id);
@@ -32,7 +32,7 @@
 	async function loginWithGoogle() {
 		return signInWithPopup(auth, provider)
 			.then(() => goto('/qr'))
-			.then(() => exitdb())
+			.then(() => existDb())
 			.then((alreadyExistDb) => {
 				if (!alreadyExistDb) {
 					console.log('exist db!');
