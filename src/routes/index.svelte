@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { db } from '$lib/firebase';
 	import { user as userStore } from '$lib/stores/user';
-	import { auth, db } from '$lib/firebase';
-	import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+	import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 	import { doc, getDoc, setDoc } from 'firebase/firestore';
-	import { onMount } from 'svelte';
 
 	async function exitdb() {
 		try {
@@ -47,24 +46,6 @@
 			console.log(e);
 		}
 	}
-
-	onMount(() => {
-		onAuthStateChanged(auth, (user) => {
-			if (user) {
-				// User is signed in
-				userStore.set({
-					id: user.uid,
-					name: user.displayName ?? ''
-				});
-				console.log('login');
-				goto('/qr');
-			} else {
-				userStore.set(undefined);
-				// User is signed out
-				console.log('logout');
-			}
-		});
-	});
 </script>
 
 <div class="top center high">

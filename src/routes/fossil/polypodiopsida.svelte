@@ -1,6 +1,6 @@
 <script>
 	import { user } from '$lib/stores/user';
-	import { checkio, db } from '$lib/firebase';
+	import { db } from '$lib/firebase';
 	import { doc, updateDoc } from 'firebase/firestore';
 	import Header from '$lib/components/header.svelte';
 	import { onMount } from 'svelte';
@@ -19,7 +19,6 @@
 		}
 	}
 	onMount(() => {
-		checkio();
 		updatedb();
 	});
 </script>
