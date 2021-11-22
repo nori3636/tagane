@@ -12,9 +12,7 @@
 				console.log('goto前');
 				return goto('/');
 			})
-			.catch((e) => {
-				console.log(e);
-			});
+			.catch(console.log);
 	}
 	async function backqr() {
 		await goto('/qr');
