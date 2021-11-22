@@ -7,7 +7,7 @@
 
 <Column sm={2} md={4} lg={8} class="auma" noGutter>
 	{#if show}
-		<img src={name + '.jpg'} alt="name" width="80%" />
+		<img src="{name}.jpg" alt="name" width="80%" />
 		<div><h4>{name}</h4></div>
 	{:else}
 		<img src="non.jpg" alt="noimage" width="80%" />
