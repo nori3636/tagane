@@ -1,64 +1,63 @@
 <script lang="ts">
-	import type { QRCode } from 'jsqr';
 	import { goto } from '$app/navigation';
+	import { copyVideoFrameToCanvas, drawRect } from '$lib/qr';
 	import jsQR from 'jsqr';
 	import { onMount } from 'svelte';
 
-	onMount(() => {
-		const video = document.createElement('video');
-		const canvas = <HTMLCanvasElement>document.getElementById('canvas');
-		const ctx = canvas.getContext('2d');
-		const userMedia = { video: { facingMode: 'environment' } };
+	let video: HTMLVideoElement | null = null;
+	let canvas: HTMLCanvasElement | null = null;
+	let rafId: number | undefined;
 
-		navigator.mediaDevices.getUserMedia(userMedia).then((stream) => {
+	const detectQr = () => {
+		if (video === null) throw new Error('Video element has not mounted.');
+		if (canvas === null) throw new Error('Canvas element has not mounted.');
+
+		const ctx = canvas.getContext('2d');
+		if (!ctx) throw new Error('Browser has no support for canvas 2d context');
+
+		if (!copyVideoFrameToCanvas(video, canvas)) {
+			rafId = window.requestAnimationFrame(detectQr);
+			return;
+		}
+
+		const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		const qr = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
+
+		if (qr === null) {
+			rafId = window.requestAnimationFrame(detectQr);
+			return;
+		}
+
+		drawRect(ctx, qr.location); // Rect
+		if (qr.data.startsWith(location.origin)) goto(qr.data);
+	};
+
+	onMount(() => {
+		let mediaStream: MediaStream | undefined;
+		navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } }).then((stream) => {
+			if (video === null) throw new Error('Video element has not mounted.');
+			mediaStream = stream;
 			video.srcObject = stream;
-			video.setAttribute('playsinline', '');
 			video.play();
-			startTick();
+			rafId = window.requestAnimationFrame(detectQr);
 		});
 
-		function startTick() {
-			if (!ctx) throw new Error('Browser has no support for canvas 2d context');
-			console.log('Loading video...');
-			if (video.readyState === video.HAVE_ENOUGH_DATA) {
-				//canvas.height = video.videoHeight;
-				//canvas.width = video.videoWidth;
-				ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-				const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
-				const code = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
-				if (code) {
-					drawRect(code.location); // Rect
-					// msg.innerText = code.data; // Data
-					if (code.data.startsWith('https://tagane.vercel.app/')) {
-						goto(code.data);
-					}
-				} else {
-					console.log('Detecting QR-Code...');
-				}
-			}
-			setTimeout(startTick, 100);
-		}
-
-		function drawRect(location: QRCode['location']) {
-			drawLine(location.topLeftCorner, location.topRightCorner);
-			drawLine(location.topRightCorner, location.bottomRightCorner);
-			drawLine(location.bottomRightCorner, location.bottomLeftCorner);
-			drawLine(location.bottomLeftCorner, location.topLeftCorner);
-		}
-
-		type Point = { x: number; y: number };
-		function drawLine(begin: Point, end: Point) {
-			if (!ctx) throw new Error('Browser has no support for canvas 2d context');
-			ctx.lineWidth = 4;
-			ctx.strokeStyle = '#FF3B58';
-			ctx.beginPath();
-			ctx.moveTo(begin.x, begin.y);
-			ctx.lineTo(end.x, end.y);
-			ctx.stroke();
-		}
+		return () => {
+			mediaStream?.getTracks()?.forEach((track) => track.stop());
+			if (rafId !== undefined) window.cancelAnimationFrame(rafId);
+		};
 	});
 </script>
 
-<div id="wrapper" class="center">
-	<canvas id="canvas" height="250" />
+<div class="center">
+	<video bind:this={video} playsinline autoplay>
+		<track kind="captions" />
+	</video>
+	<canvas bind:this={canvas} height="250" />
 </div>
+
+<style>
+	video {
+		display: none;
+	}
+</style>
